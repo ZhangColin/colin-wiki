@@ -44,9 +44,9 @@ colin-wiki/
 ├── templates/           # 各类页面骨架（source/entity/concept/synthesis）
 ├── INDEX.md             # 内容目录（LLM 每次 ingest 维护）
 ├── LOG.md               # 时间线日志（append-only）
-└── bases/               # Obsidian Bases 动态视图
-    ├── 全部页面.bases
-    └── 待办与缺口.bases
+└── bases/               # Obsidian Bases 动态视图（.base 文件，YAML）
+    ├── 全部页面.base
+    └── 待办与缺口.base
 ```
 
 **所有权规则**：
@@ -188,12 +188,12 @@ append-only 时间线。前缀可被 unix 工具解析：
 格式：`## [YYYY-MM-DD] <op> | <标题/摘要>`，`<op> ∈ {init, ingest, query, lint, update}`。
 查询最近 N 条：`grep "^## \[" LOG.md | tail -N`。
 
-### 7.3 Bases 视图
+### 7.3 Bases 视图（`.base` 文件，YAML）
 
-- `bases/全部页面.bases` —— 按 `type` / `domain` / `status` 分组列出全部 `wiki/` 页面。
-- `bases/待办与缺口.bases` —— 聚合 `status: stale|draft`、无入链孤儿页、被引用但无独立页的概念，作为 lint 的可视化入口。
+- `bases/全部页面.base` —— 列出 `wiki/` 全部页面，按 `type` 分组，显示 `status` / `updated`。
+- `bases/待办与缺口.base` —— 过滤 `status: stale|draft` 的待完善页面，按 `status` 分组，作为 lint 的可视化入口。（孤儿页 / 缺失概念页由 LLM 在 lint 时基于 `file.backlinks` 判定并写入 LOG，不强行塞进 Bases 过滤，避免不确定语法。）
 
-> Bases 需 Obsidian 1.9+（或对应 Bases 特性）。`.bases` 为纯文本 JSON，git 友好。
+> Bases 文件用 `.base` 扩展名 + YAML（依据已装的 obsidian-bases skill）。需 Obsidian 1.9+（或对应 Bases 特性）。纯文本 YAML，git 友好。
 
 ## 8. Obsidian 配置变更
 
@@ -215,7 +215,7 @@ append-only 时间线。前缀可被 unix 工具解析：
 - `templates/source.md`、`templates/entity.md`、`templates/concept.md`、`templates/synthesis.md`（四种页面骨架，含 frontmatter 与正文结构提示）
 - `INDEX.md`（空骨架，含四类小标题）
 - `LOG.md`（含首条 `## [2026-07-24] init | 初始化 wiki 结构`）
-- `bases/全部页面.bases`、`bases/待办与缺口.bases`
+- `bases/全部页面.base`、`bases/待办与缺口.base`（YAML 格式）
 - 更新 `.obsidian/app.json` 设置 `attachmentFolderPath`
 
 ## 10. 非目标（YAGNI）
@@ -230,7 +230,7 @@ append-only 时间线。前缀可被 unix 工具解析：
 
 - 目录结构与第 3 节一致，所有权规则在 `CLAUDE.md`/`AGENTS.md` 中明确。
 - 四种页面骨架存在且 frontmatter 与第 4 节 schema 一致。
-- `INDEX.md`、`LOG.md`（含 init 记录）、两个 `.bases` 文件就位。
+- `INDEX.md`、`LOG.md`（含 init 记录）、两个 `.base` 文件就位。
 - `.obsidian/app.json` 指向 `raw/assets`。
 - `CLAUDE.md` 与 `AGENTS.md` 内容逐字一致（跨工具同步）。
 - 两个规则文件加载后，LLM 能正确执行 ingest/query/lint 三流程并维护 INDEX/LOG。
