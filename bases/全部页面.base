@@ -1,0 +1,24 @@
+filters:
+  and:
+    - 'file.inFolder("wiki")'
+    - 'file.ext == "md"'
+
+properties:
+  type:
+    displayName: 类型
+  status:
+    displayName: 状态
+  updated:
+    displayName: 更新
+
+views:
+  - type: table
+    name: 按类型
+    order:
+      - file.name
+      - type
+      - status
+      - updated
+    groupBy:
+      property: type
+      direction: ASC
