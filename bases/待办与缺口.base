@@ -1,11 +1,10 @@
 filters:
   and:
-    - 'file.inFolder("wiki")'
-    - 'file.ext == "md"'
+    - file.inFolder("wiki")
+    - file.ext == "md"
     - or:
-        - 'status == "stale"'
-        - 'status == "draft"'
-
+        - status == "stale"
+        - status == "draft"
 properties:
   type:
     displayName: 类型
@@ -13,15 +12,14 @@ properties:
     displayName: 状态
   updated:
     displayName: 更新
-
 views:
   - type: table
     name: 待完善页面
+    groupBy:
+      property: status
+      direction: ASC
     order:
       - file.name
       - type
       - status
       - updated
-    groupBy:
-      property: status
-      direction: ASC

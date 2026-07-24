@@ -1,6 +1,6 @@
 # colin-wiki 维护规则
 
-> 本文件是 colin-wiki 个人知识库的 schema。`CLAUDE.md`（Claude Code）与 `AGENTS.md`（Codex / Cursor / Copilot 等读 AGENTS.md 的工具）内容**完全一致**，互为镜像。**修改任一处，必须同步另一处。** 方法论依据：仓库根目录 `llm-wiki.md`。
+> 本文件是 colin-wiki 个人知识库的 schema。`CLAUDE.md`（Claude Code）与 `AGENTS.md`（Codex / Cursor / Copilot 等读 AGENTS.md 的工具）内容**完全一致**，互为镜像。**修改任一处，必须同步另一处。** 方法论依据：Karpathy 的 LLM Wiki gist，原文存于 `raw/articles/llm-wiki.md`（只读），摘要见 [[LLM Wiki 方法论 gist]]。
 
 ## 1. 你的角色
 
