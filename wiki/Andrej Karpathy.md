@@ -1,13 +1,20 @@
 ---
 type: entity
-title: "Andrej Karpathy"
-domain: [AI, 知识管理]
-tags: [LLM Wiki, 方法论, AI研究者]
-sources: ["[[LLM Wiki 方法论 gist]]", "[[Karpathy 的 LLM Wiki 搭建实战]]"]
+title: Andrej Karpathy
+domain:
+  - AI
+  - 知识管理
+tags:
+  - 方法论
+  - AI研究者
+sources:
+  - "[[LLM Wiki 方法论 gist]]"
+  - "[[Karpathy 的 LLM Wiki 搭建实战]]"
 created: 2026-07-24
 updated: 2026-07-24
 status: active
-aliases: ["Karpathy"]
+aliases:
+  - Karpathy
 ---
 
 # Andrej Karpathy

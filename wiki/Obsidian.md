@@ -1,13 +1,22 @@
 ---
 type: entity
-title: "Obsidian"
-domain: [知识管理, AI工具]
-tags: [Obsidian, 知识库, markdown, 双链, LLM Wiki]
-sources: ["[[LLM Wiki 方法论 gist]]", "[[Karpathy 的 LLM Wiki 搭建实战]]"]
+title: Obsidian
+domain:
+  - 知识管理
+  - AI工具
+tags:
+  - Obsidian
+  - 知识库
+  - markdown
+  - 双链
+sources:
+  - "[[LLM Wiki 方法论 gist]]"
+  - "[[Karpathy 的 LLM Wiki 搭建实战]]"
 created: 2026-07-24
 updated: 2026-07-24
 status: active
-aliases: ["Obsidian.md"]
+aliases:
+  - Obsidian.md
 ---
 
 # Obsidian

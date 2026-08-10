@@ -1,18 +1,26 @@
 ---
 type: source
-title: "Karpathy 的 LLM Wiki 搭建实战：三层架构 + 三大操作"
-domain: [知识管理, AI工具]
-tags: [LLM Wiki, Obsidian, 知识库, RAG, 方法论, AGENTS.md]
+title: Karpathy 的 LLM Wiki 搭建实战：三层架构 + 三大操作
+domain:
+  - 知识管理
+  - AI工具
+tags:
+  - Obsidian
+  - 知识库
+  - RAG
+  - 方法论
 sources: []
-source_path: "raw/articles/Karpathy 的 LLM Wiki 搭建实战：三层架构 + 三大操作，Obsidian + AGENTS.md 让知识库自我维护.md"
+source_path: raw/articles/Karpathy 的 LLM Wiki 搭建实战：三层架构 + 三大操作，Obsidian + AGENTS.md 让知识库自我维护.md
 source_type: article
-source_url: "https://mp.weixin.qq.com/s/UKJ16eyp1STkkkajTSrjnA"
-author: "运维有术（术哥）"
+source_url: https://mp.weixin.qq.com/s/UKJ16eyp1STkkkajTSrjnA
+author: 运维有术（术哥）
 date_published: 2026-07-03
 created: 2026-07-24
 updated: 2026-07-24
 status: active
-aliases: ["术哥 LLM Wiki 教程", "Karpathy LLM Wiki 实战"]
+aliases:
+  - 术哥 LLM Wiki 教程
+  - Karpathy LLM Wiki 实战
 ---
 
 # Karpathy 的 LLM Wiki 搭建实战：三层架构 + 三大操作

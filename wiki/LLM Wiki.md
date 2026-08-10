@@ -1,13 +1,23 @@
 ---
 type: concept
-title: "LLM Wiki"
-domain: [知识管理, AI工具]
-tags: [LLM Wiki, 知识库, 方法论, RAG, Memex]
-sources: ["[[LLM Wiki 方法论 gist]]", "[[Karpathy 的 LLM Wiki 搭建实战]]"]
+title: LLM Wiki
+domain:
+  - 知识管理
+  - AI工具
+tags:
+  - 知识库
+  - 方法论
+  - RAG
+  - Memex
+sources:
+  - "[[LLM Wiki 方法论 gist]]"
+  - "[[Karpathy 的 LLM Wiki 搭建实战]]"
 created: 2026-07-24
 updated: 2026-07-24
 status: active
-aliases: ["LLM Wiki 模式", "Karpathy Wiki"]
+aliases:
+  - LLM Wiki 模式
+  - Karpathy Wiki
 ---
 
 # LLM Wiki

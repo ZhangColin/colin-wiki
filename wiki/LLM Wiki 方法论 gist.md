@@ -1,18 +1,27 @@
 ---
 type: source
-title: "LLM Wiki 方法论 gist"
-domain: [知识管理, AI工具]
-tags: [LLM Wiki, 方法论, 知识库, Memex, git]
+title: LLM Wiki 方法论 gist
+domain:
+  - 知识管理
+  - AI工具
+tags:
+  - 方法论
+  - 知识库
+  - Memex
+  - git
 sources: []
-source_path: "raw/articles/llm-wiki.md"
+source_path: raw/articles/llm-wiki.md
 source_type: article
-source_url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-author: "Andrej Karpathy"
+source_url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+author: Andrej Karpathy
 date_published: ""
 created: 2026-07-24
 updated: 2026-07-24
 status: active
-aliases: ["Karpathy LLM Wiki gist", "llm-wiki.md", "LLM Wiki 原文"]
+aliases:
+  - Karpathy LLM Wiki gist
+  - llm-wiki.md
+  - LLM Wiki 原文
 ---
 
 # LLM Wiki 方法论 gist
