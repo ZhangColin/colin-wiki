@@ -53,6 +53,8 @@ Skill 加载 Eval（精度+召回）→ 渐进加载 Eval（读对 spoke 文件�
 
 [[Matt Pocock]] 的 writing-great-skills 词汇（progressive disclosure、leading word、no-op、negation、completion criterion）与本文 progressive disclosure/gotchas 同源——都是"用最小锚点挤出确定性"。[[Anthropic]] 第一条最佳实践"不要说显而易见的事"与 [[Perplexity]] 的 Python 之禅失效论同义。详见 [[Matt Pocock writing-great-skills 八词诊断]] 与 [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]]。
 
+**v1.2 新证据（2026-08）**：wait-what 全文仅 7 行、一行正文——官方理由 **"concision skills fail by growing"**（精简指令写得越长模型照样 verbose），与 [[Perplexity]] "不应靠加长指令解决问题"完全同源；其 naming 命名的是**听者状态**而非输出形态（与"description 是路由触发器非功能文档"同理）。v1.2 的 #781 harness-neutral（去专有工具名）与双平台 invocation 语义对齐（`disable-model-invocation: true` ⇔ `policy.allow_implicit_invocation: false`），是"同一 skill 跨 harness 行为一致"的工程化实践。详见 [[Matt Pocock Skills v1.2 更新全景]]。
+
 ## ⚠️ 矛盾 / 未解问题
 
 - **Python 之禅（PEP20）在 Skill 场景大面积失效**（[[Perplexity]] 对比表）："简单优于复杂""显式优于隐式""稀疏优于密集""特殊情况不足以打破规则""容易解释就是好主意"——5 条在通用编程成立但在 Skill 场景均错。引用 PEP20 作编码哲学时须限定适用域。

@@ -29,6 +29,8 @@ aliases:
 > 一句话要点：[[小匠Skills]] 对 [[mattpocock skills]] v1.0 体系的全景总览——两类触发、四步主流程、三大变体、自动规范 skill、辅助工具，是中文圈最系统的入门解读。
 
 > 🔖 **v1.1 升级注记**（2026-08-10）：本文为 **v1.0 视角**（忠实记录原文，正文不再改写）。v1.1 起：命令更名 `/to-prd`→`/to-spec`、`/to-issues`+`/to-plan`→`/to-tickets`；新增 `/wayfinder`（大型项目规划）与 `/implement`（非 TDD 实现路径）；grill 区分 Facts/Decisions + 确认闸门；code-review 双轴。**v1.1 新内容见** [[MattPocock Skills v1.1 重磅更新]]、[[Matt Pocock skills v1.1 官方更新日志]]、[[mattpocock skills]] 概念页「v1.1 演进」表，以及 v1.1 机制深读系列（[[Matt Pocock main flow 五环节]]、[[Matt Pocock skills Wayfinder 官方文档]] 等）。
+>
+> 🔖 **v1.2 追记**（2026-08-17）：v1.2（2026-08-05）grilling 重构为 round-by-round frontier（13 问约 3 轮），新增 wizard/to-questionnaire/wait-what 毕业、prototype 留档、双平台安装（官方 plugin/skills.sh）。见 [[Matt Pocock Skills v1.2 更新全景]] 与概念页「v1.2 演进」表。
 
 ## 关键要点
 

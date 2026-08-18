@@ -48,6 +48,17 @@ aliases:
 3. **context pointer 留在 ticket**（指向 findings 文件/分支，防知识散落会话记忆）。
 4. **`ready-for-agent` + AGENT-BRIEF.md 契约**（防 agent 跑偏）。agent brief 四要点：Durability over precision、Behavioral not procedural、Complete acceptance criteria、Explicit scope boundaries。
 
+## wizard：脚本化 HITL（v1.2 新形态，2026-08）
+
+v1.2 毕业的 `wizard` 补上了 HITL 谱系的第三种形态——**脚本化 HITL**：
+
+- **运行时 HITL**（主流框架）：agent 运行中暂停等确认（Haystack confirmation policy、LangGraph halt/resume、ag2 human_input_mode）。
+- **脚本化 HITL**（wizard）：agent 撞到"只有人能做的步骤"（配密钥/开面板/一次性迁移）时，生成交互式 bash 向导，**agent 只写脚本、从不运行它；脚本由人在自己的机器上运行**——"Nothing is sent to an agent while it runs"（密钥不经 agent）。产物可复用/可提交/可版本化，代价是无即时反馈，用静态检查+逐值流向追踪补。
+- 与 grilling 的分工：**wizard=执行型人机交接（人怎么参与），grilling=决策型对齐（做什么、为什么）**。官方定位："sitting at the line where automation stops and a human has to click"——不扩大自动化范围。
+- 姊妹机制：`to-questionnaire`（v1.2）——"grill the send, not the subject"，答案只在别人脑子里时生成问卷而非问 agent。
+
+详见 [[Matt Pocock wizard 人墙自动化]]。
+
 ## handoff ≠ AFK（易混点澄清）
 
 两者都用写文件、留指针作为交接手段，但语义完全不同：
@@ -69,4 +80,4 @@ aliases:
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock 后台 research 与主线程并行]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock 三条 on-ramp 分流]] · [[Matt Pocock skills Handoff 官方文档]] · [[smart zone]]
+- [[mattpocock skills]] · [[Matt Pocock 后台 research 与主线程并行]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock 三条 on-ramp 分流]] · [[Matt Pocock skills Handoff 官方文档]] · [[Matt Pocock wizard 人墙自动化]] · [[Matt Pocock 会话边界五问决策树]] · [[smart zone]]

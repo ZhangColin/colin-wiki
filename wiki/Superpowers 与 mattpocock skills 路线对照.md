@@ -48,12 +48,14 @@ aliases:
 2. **目标产物差异决定选型**（[[2026 年再看 Superpowers：grill-me 场景选型]] 结论）：要规格文档→Superpowers brainstorming；要压力测试共享理解→grill-me。当前**无对照实验**证明谁更快/更准/更省 token。
 3. **可共存**：mattpocock 大部分命令不参与自动触发，superpowers 的 hook 只强推自己那 14 个，互不抢匹配（[[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]]）。本 vault 自身就在用 superpowers，同时把 mattpocock skills 作为对照系研究。
 4. **选型启发**：追求工程规范、团队可审计、多平台 → 偏 Superpowers；追求轻量灵活、单命令可组合、context 经济 → 偏 mattpocock。
+5. **社区定位印证（2026-08 新增，v1.2 后）**：第三方深度对比（ryanuo.cc，经 [[Matt Skills v1.2 grilling 重构]] 转述）给出精准定位——**"grill-me is the pressure-test primitive; Superpowers is the default engineering OS"**（grill-me 是压测原语，Superpowers 是默认工程操作系统）；AI Coding Daily 称 grill-me "一直是 planning 领域的标准"。**社区共识是可组合而非互斥**：先用 grill-me 对齐，再用 Superpowers 的 plan/TDD/worktree 跑全流程，各取所长——与本页结论 3 一致。
 
 ## 引用
 
 - [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] — 689 行 vs 12 行的源码级对比，路线分歧最系统陈述
 - [[2026 年再看 Superpowers：grill-me 场景选型]] — grill-me vs brainstorming 按目标产物选工具
 - [[Anthropic 与 Perplexity 的 Skills 设计方法论]] — 两者共同的方法论根基（上下文工程）
+- [[Matt Skills v1.2 grilling 重构]] — v1.2 后的社区定位与"可组合"共识
 - [[Superpowers]] · [[mattpocock skills]] — 两概念页
 
 ## 相关页面

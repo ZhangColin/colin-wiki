@@ -19,6 +19,8 @@ aliases: [grill-with-docs, /grill-with-docs, domain-modeling, /domain-modeling]
 
 > 一句话要点：`/grill-with-docs` = `/grilling`（追问）+ `/domain-modeling`（落字）两个原语串联的工程入口，把需求共识从"只活在对话里"沉淀为仓库里的 `CONTEXT.md`（glossary）与 ADR（决策记录）——Matt 本人推荐的 coding 入口，取代 `/grill-me`。
 
+> 🔖 **v1.2 追记**（2026-08-17）：本文记录的 grilling 分层（7 行入口 + 12 行原语）在 v1.2 仍成立，但 grilling 原语已重构为 round-by-round frontier（13 问约 3 轮，可 opt-out 回一次一问）。本文"一次一问"相关表述按 v1.2 前行为理解。详见 [[Matt Skills v1.2 grilling 重构]]。
+
 ## 关键要点
 
 - **核心一句话**：`grill-with-docs/SKILL.md` 全文 7 行，实质就一句 "Run a `/grilling` session, using the `/domain-modeling` skill"——刻意把追问纪律（`grilling`，不写文件）和沉淀纪律（`domain-modeling`，落 `CONTEXT.md`/ADR）拆成两个原语，入口按需组合。

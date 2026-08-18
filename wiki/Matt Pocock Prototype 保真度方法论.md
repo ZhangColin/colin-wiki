@@ -19,6 +19,8 @@ aliases: [prototype 方法论, 保真度方法论, UI 原型 vs Logic 原型]
 
 > 一句话要点：[[运维有术]] 详解 `/prototype` skill——"throwaway code that answers a question"，用可运行代码代替文字描述讨论设计；分 UI 分支（结构不同变体 + `?variant=` 切换）与 Logic 分支（纯 reducer + TUI shell），核心是当原型成本趋零时讨论保真度就该更高。
 
+> 🔖 **v1.2 升级注记**（2026-08-17）：本文为 **v1.1 视角**。v1.2（2026-08-05）对 prototype 有方向性重塑：①throwaway **不再等于删除**——原型是 primary source，验证完归档到 `prototype/<name>` 分支 + issue 留 context pointer（"throwaway 定义的是命题，不是代码本体"）；②logic 分支产物从 TUI shell 改为**单个可分享 HTML 文件**（无 build/无 server，面向非开发者演示）；③UI 分支 `?variant=` 变体上限 5 个，胜出 fold 进真实代码、输家上 throwaway 分支。详见 [[Matt Pocock Skills v1.2 更新全景]]。
+
 ## 关键要点
 
 - **prototype 定义**（原文）："A prototype is throwaway code that answers a question"。解决"还没法用语言精确描述需求时，先用可运行代码把问题可视化"——用眼睛做评审而非用文字做翻译。
@@ -51,4 +53,4 @@ aliases: [prototype 方法论, 保真度方法论, UI 原型 vs Logic 原型]
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock skills Handoff 官方文档]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock]] · [[运维有术]]
+- [[mattpocock skills]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock skills Handoff 官方文档]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock Skills v1.2 更新全景]] · [[Matt Pocock]] · [[运维有术]]

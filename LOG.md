@@ -91,3 +91,32 @@
 - **v1.0 旧页加 v1.1 升级注记**：[[mattpocock skills 标准工作流]]、[[mattpocock skills 秒杀系统实战]] 顶部加醒目 🔖 注记块，指向 v1.1 新内容（命令更名/wayfinder/implement/双轴 review），正文保留作历史记录不重写。
 - INDEX 综合 区登记 2 新页；[[Superpowers]]/[[gstack]] 反向链接到新 synthesis。
 - 用户决定：star 数不 web 核实（保持存疑标注）。
+
+## [2026-08-17] ingest | 增量 8 源（v1.2 系列 4 + AgentScope 3 + Harness Engineering 1）
+
+处理 8/10 之后新增的 8 篇文章（含 1 篇上次被 git 一并提交但未 ingest 的 AgentScope 首篇）：
+
+**mattpocock skills v1.2 系列（4 源，均 [[运维有术]]）**：
+- [[Matt Skills v1.2 grilling 重构]] — grilling 从一次一问重构为 round-by-round frontier（13 问约 3 轮），争议设计可 opt-out
+- [[Matt Pocock wizard 人墙自动化]] — 人墙步骤→交互式 bash 向导，"agent 只写脚本从不运行"，脚本化 HITL
+- [[Matt Pocock 会话边界五问决策树]] — ask-matt 的 PHASE-BOUNDARIES.md：Continue/clear/handoff/subagent/compact 五问串行决策，compact 垫底
+- [[Matt Pocock Skills v1.2 更新全景]] — 4 处人机边界位移 + 双平台三态 + prototype 留档
+
+**AgentScope Java 系列（3 源，[[AI实战有术]]/Dilee，新领域）**：
+- [[AgentScope Java 2.0 正式版]]（v2.0.0 GA 解读 + 三框架选型）、[[AgentScope Java 2.0 上手 Web 接口]]、[[AgentScope Java 2.0 核心架构拆解]]
+
+**Harness Engineering（1 源，[[腾讯程序员]]/atreusliu）**：
+- [[Harness Engineering 团队落地规范]] — OpenAI"Agent = Model + Harness"理念的团队级落地（6 支柱 + harness-audit）
+
+**新建**：实体 [[AgentScope Java]]、[[AI实战有术]]、[[腾讯程序员]]；概念 [[Harness Engineering]]（跨源：腾讯落地 + AgentScope HarnessAgent + Matt v1.2 harness-neutral）。
+
+## [2026-08-17] lint | v1.2 触发的口径更新与注记同步
+
+- **[[mattpocock skills]] 概念页**：新增「v1.2 演进」段（8 行对照表）；一句话定义更新（212K★/13.5M 下载/双 harness）；§6 grill-me 补 7 行薄封装与依赖坑；相关页面补 4 源。
+- **star 数口径更新**：7 月 170K → 8 月 212.2K（08-10 检索，全站第 19）/213.4K（08-14）；增长曲线 5 月 77K→7 月 170K→8 月 212K。
+- **skill 数口径随版本演进**：v1.1=18（源码核对）→ v1.2 plugin=24 个 promoted skill——引用必须带版本号。
+- **[[smart zone]] 新增口径**："约 40% context 处开始退化"（相对比例）并入阈值表；新增 Context Rot 论文机制（退化由长度本身造成）、Ralph 插件反面教材、会话预算纪律。
+- **v1.2 注记同步 5 页**：[[Matt Pocock Prototype 保真度方法论]]（TUI→单文件 HTML、删除→留档）、[[grill-me 实战指南]]（grilling round-based）、[[还在用 grill-with-docs]]、[[mattpocock skills 标准工作流]] 与 [[mattpocock skills 秒杀系统实战]]（v1.1 注记升级为含 v1.2 的版本演进链）。
+- **[[运维有术]]** 补 v1.2 四连发系列；**[[Superpowers 与 mattpocock skills 路线对照]]** 补社区定位印证（"grill-me is the pressure-test primitive; Superpowers is the default engineering OS" + 可组合共识）；**[[HITL 与 AFK]]** 补 wizard 脚本化 HITL 小节；**[[Skills 设计方法论]]** 补 wait-what/concision 同源证据。
+- INDEX 新增 3 实体 + 1 概念 + 8 源（新开 v1.2 与 AgentScope 两个源分组）；pending 补"会话边界管理""round-by-round frontier""OpenAI"。
+- 待用户后续观察：v1.2 的 round-based 是否成为标准（半年后看多少人切回一次一问）；wizard #811 symlink bug 官方修复进展。

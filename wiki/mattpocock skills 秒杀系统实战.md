@@ -28,7 +28,9 @@ aliases:
 
 > 一句话要点：[[AI随风随风]]（B 站）用一个「秒杀系统 Demo」把 [[mattpocock skills]] 全套技能串起来实战演示——从初始化、需求访谈、PRD、原型、开发、Review、Bug 调试到交接与教学文档，第三方第二视角。
 
-> 🔖 **v1.1 升级注记**（2026-08-10）：本视频为 **v1.0 视角**（忠实记录原 demo，正文不再改写）。v1.1 起命令更名 `/to-prd`→`/to-spec`、`/to-issues`→`/to-tickets`，并新增 `/wayfinder`（大型规划）、`/implement`（非 TDD 路径）。**v1.1 新内容见** [[MattPocock Skills v1.1 重磅更新]]、[[Matt Pocock skills v1.1 官方更新日志]]、[[mattpocock skills]] 概念页。另：本 wiki 另有同主题"电商高并发扣减"实战 [[Superpowers 7阶段交付SKU库存扣减]]（用 Superpowers 框架，可对照）。
+> 🔖 **v1.1 升级注记**（2026-08-10）：本视频为 **v1.0 视角**（忠实记录原 demo，正文不再改写）。v1.1 起命令更名 `/to-prd`→`/to-spec`、`/to-issues`→`/to-tickets`，并新增 `/wayfinder`（大型规划）、`/implement`（非 TDD 路径）。**v1.1 新内容见** [[MattPocock Skills v1.1 重磅更新]]、[[Matt Pocock skills v1.1 官方更新日志]]、[[mattpocock skills]] 概念页。
+>
+> 🔖 **v1.2 追记**（2026-08-17）：v1.2（2026-08-05）grilling 重构（13 问约 3 轮）、wizard/to-questionnaire/wait-what 毕业、prototype 留档、双平台。见 [[Matt Pocock Skills v1.2 更新全景]]。另：本 wiki 另有同主题"电商高并发扣减"实战 [[Superpowers 7阶段交付SKU库存扣减]]（用 Superpowers 框架，可对照）。
 
 ## 视频信息
 

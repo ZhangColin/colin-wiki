@@ -20,6 +20,9 @@
 - [[Anthropic]] — Claude/Claude Code 公司，Agent Skills 开放标准发起方（2025-12 捐 AAIF）
 - [[Perplexity]] — Skills 设计方法论提出方（三层成本/Hub-and-Spoke/Gotchas 飞轮/四层 Eval）
 - [[gstack]] — Garry Tan 的 AI 工程工具集（23 命令 + Sprint 工作流 + 无头浏览器）
+- [[AgentScope Java]] — 开源 Java Agent 运行时框架（HarnessAgent/ReActAgent/Toolkit 三层）
+- [[AI实战有术]] — Dilee（11 年 Java 老兵），AgentScope Java 系列解读作者
+- [[腾讯程序员]] — 公众号（atreusliu），Harness Engineering 团队落地规范作者
 
 ## 概念 (concept)
 
@@ -31,6 +34,7 @@
 - [[子代理驱动开发]] — Superpowers 核心执行模式：fresh subagent per task + 独立审查 + 上下文隔离
 - [[Skills 设计方法论]] — Skills 即上下文工程（Anthropic/Perplexity 共识）：三层成本 + Hub-and-Spoke + Gotchas + 四层 Eval
 - [[智能问数平台]] — NL2SQL 生产级形态：五层架构 + 语义层先行 + 权限贯穿（新领域种子概念）
+- [[Harness Engineering]] — Agent = Model + Harness：6 大支柱的运行环境工程学（OpenAI 提出，腾讯/AgentScope/Matt skills 多路落地）
 
 ## 源 (source)
 
@@ -59,11 +63,16 @@
 - [[Matt Pocock 后台 research 与主线程并行]] — HITL/AFK 前台后台并行 + 四道边界 + handoff≠AFK · 2026-08-07
 - [[Matt Pocock Prototype 保真度方法论]] — UI/Logic 双分支 + 保真度光谱 · 2026-08-04
 
-### mattpocock skills — grill / 调试 / Git 护栏
-- [[grill-me 实战指南]] — grill-me(入口)/grilling(原语)分层 + 五规则（已被 grill-with-docs 取代） · 2026-07-20
+### mattpocock skills — grill / 调试 / Git 护栏- [[grill-me 实战指南]] — grill-me(入口)/grilling(原语)分层 + 五规则（已被 grill-with-docs 取代） · 2026-07-20
 - [[还在用 grill-with-docs]] — grill-with-docs = grilling + domain-modeling，Matt 推荐 coding 入口 · 2026-07-21
 - [[diagnosing-bugs 与 tdd]] — red-capable command 硬约束 + 6 阶段诊断 vs Superpowers 4 阶段 · 2026-07-22
 - [[Matt Pocock 的 Git 护栏]] — 命令前/提交前/冲突时三道护栏 + PreToolUse exit 2 · 2026-08-03
+
+### mattpocock skills — v1.2 更新（2026-08）
+- [[Matt Skills v1.2 grilling 重构]] — 一次一问→round-by-round frontier，13 问约 3 轮 + opt-out · 2026-08-11
+- [[Matt Pocock wizard 人墙自动化]] — 人墙步骤→交互式 bash 向导（agent 只写不跑）· 2026-08-12
+- [[Matt Pocock 会话边界五问决策树]] — PHASE-BOUNDARIES：Continue/clear/handoff/subagent/compact，compact 垫底 · 2026-08-13
+- [[Matt Pocock Skills v1.2 更新全景]] — 4 处人机边界位移 + 双平台三态 + 24 promoted skills · 2026-08-14
 
 ### Superpowers
 - [[Superpowers 5万 Star 工程纪律框架]] — 7 阶段强制流程概览（v4.3） · 2026-02-15
@@ -81,6 +90,12 @@
 - [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] — 最小锚点+router vs hook 强制+红旗表 · 2026-07-09
 - [[2026 年再看 Superpowers：grill-me 场景选型]] — grill-me vs Superpowers brainstorming 按目标产物选 · 2026-07-16
 - [[Anthropic 与 Perplexity 的 Skills 设计方法论]] — 两家官方博客综述：9 类/3 层成本/4 层 Eval · 2026-06-12
+- [[Harness Engineering 团队落地规范]] — 腾讯团队级落地：6 支柱 + 3 阶段路线图 + harness-audit 审计 · 2026-07-17
+
+### Java Agent 框架（AgentScope）
+- [[AgentScope Java 2.0 正式版]] — v2.0.0 GA：运行时工程定位 + 三框架选型对照 · 2026-07-11
+- [[AgentScope Java 2.0 上手 Web 接口]] — HarnessAgent 接 Spring Boot 最小闭环（关掉一切再逐步加）· 2026-07-14
+- [[AgentScope Java 2.0 核心架构拆解]] — HarnessAgent/ReActAgent/Toolkit 三层 + 按层排查表 · 2026-07-15
 
 ### mattpocock skills 实战
 - [[mattpocock skills 秒杀系统实战]] — AI随风随风 的秒杀系统 demo 实战（第二视角） · 2026-07-01
@@ -108,8 +123,11 @@
 - 复利产物 (persistent compounding artifact) — LLM Wiki 的核心产物特性
 - vertical slice / tracer bullet — mattpocock skills 核心切片机制（已覆盖于 [[mattpocock skills]]）
 - leading word / deletion test / red-capable command — mattpocock skills 子机制（已覆盖于相关 source）
+- 会话边界管理（五问决策树：Continue/clear/handoff/subagent/compact）— 已覆盖于 [[Matt Pocock 会话边界五问决策树]] 与 [[smart zone]]，机制已跨多源出现，待独立建页
+- round-by-round frontier — grilling v1.2 推进机制（已覆盖于 [[Matt Skills v1.2 grilling 重构]]）
 - Claude Code — 本 vault 实际使用的 LLM agent
 - 语义层 / Schema Linking — [[智能问数平台]] 核心子机制（1 源，待第二次出现）
+- OpenAI — Harness Engineering 概念出处（2026-02 文章），暂在 [[Harness Engineering]] 内提及
 
 **实体**（被提及但非专段讨论）：
 - Codex / Cursor / OpenCode — 其他可用 LLM agent
