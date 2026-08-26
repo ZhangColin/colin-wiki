@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s/g4nTfxm7ebzRwkAVIGdIbg"
 author: "[[腾讯程序员]]"
 date_published: "2026-07-17"
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-25
 status: active
 aliases: [腾讯 Harness 规范, 驾驭AI Coding, harness-audit]
 ---
@@ -50,4 +50,4 @@ aliases: [腾讯 Harness 规范, 驾驭AI Coding, harness-audit]
 
 ## 相关页面
 
-- [[Harness Engineering]] · [[腾讯程序员]] · [[Skills 设计方法论]] · [[mattpocock skills]] · [[Superpowers]] · [[AgentScope Java]] · [[Anthropic 与 Perplexity 的 Skills 设计方法论]]
+- [[Harness Engineering]] · [[腾讯程序员]] · [[Skills 设计方法论]] · [[mattpocock skills]] · [[Superpowers]] · [[AgentScope Java]] · [[Anthropic 与 Perplexity 的 Skills 设计方法论]] · [[MCP 与直连凭证对比]]

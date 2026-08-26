@@ -120,3 +120,58 @@
 - **[[运维有术]]** 补 v1.2 四连发系列；**[[Superpowers 与 mattpocock skills 路线对照]]** 补社区定位印证（"grill-me is the pressure-test primitive; Superpowers is the default engineering OS" + 可组合共识）；**[[HITL 与 AFK]]** 补 wizard 脚本化 HITL 小节；**[[Skills 设计方法论]]** 补 wait-what/concision 同源证据。
 - INDEX 新增 3 实体 + 1 概念 + 8 源（新开 v1.2 与 AgentScope 两个源分组）；pending 补"会话边界管理""round-by-round frontier""OpenAI"。
 - 待用户后续观察：v1.2 的 round-based 是否成为标准（半年后看多少人切回一次一问）；wizard #811 symlink bug 官方修复进展。
+
+## [2026-08-25] ingest | 去哪儿网 AI Coding 研发平台实践
+
+- [[去哪儿网 AI Coding 研发平台实践]] — 李佳奇分享（[[爱海贼的无处不在]] 深度解读，2026-06-24）：L0-L5 自动化分级 + AI R&D Metrics（Volume×Maturity，反"出码率 KPI 竞赛"）+ **Harness 四把锁**（触发/门禁/隔离/人工审查 + 12 环节控制点）+ 三平台（QunarDevCenter 数据采集·三张表·Git Blame 出码率 / 天弦 QDO 自修复编排·JDK 升级 211 应用 / Qsuperpowers 企业定制 Superpowers·3pd→1pd 提效 66%）+ Skills Gateway 治理（50 Skills·PR 审核·种子上下文）+ 双估时机制；成果 100% 覆盖 / 75%+ 出码率 / L3 占比 30%+（自述口径）。
+- 新建：实体 [[去哪儿网]]（含三大内部产品条目）、[[爱海贼的无处不在]]。
+- 更新概念 3 页：[[Harness Engineering]]（第 4 源，新增"去哪儿样本"小节；注记同词侧重差异——OpenAI"赋能型运行环境" vs 去哪儿"控制型过程能力"，互补非矛盾）；[[Superpowers]]（新增"企业级定制印证：Qsuperpowers"——skill 名原样复用 + 定位边界"通用流程标准化，企业集成自建"）；[[Skills 设计方法论]]（新增"去哪儿 Skills Gateway"小节——失效点≈Gotchas 互补路径、种子上下文≈上下文工程）。
+- INDEX：新增"企业级 AI Coding 实践（大厂平台）"源分组（腾讯落地规范自"方法论对比"移入）；pending 补 L0-L5 分级 / 双估时 / T-M-C 与出码率 Git Blame 法（均 1 源）。
+- 待观察：去哪儿成果数字为大会自述、文章为二手解读，后续若有第三方/官方一手材料需回填核对。
+
+## [2026-08-25] ingest | 腾讯 Agent 与 Skill 测评方案
+
+- [[腾讯 Agent 与 Skill 测评方案]] — [[腾讯程序员]]（martinskxu，TEG 云架构平台部网关测试团队，2026-06-16）：三类评分器（确定性 > Rubric LLM-as-Judge > 人工，"能用代码判断的绝不用模型"）+ 五维度（功能/过程/效率/鲁棒/体验）+ 用例四场景（触发/核心逻辑/产物/异常容错，负向触发用例防过度触发）+ 基线机制（先跑→人工确认→即预期）+ 能力/回归双轨与用例"毕业" + pass^k vs pass@k + TPerf 实战（LCS 步骤对齐、9 场景 30+ 用例 × 7 模型、辅助分析类主动上调 0 容忍）。
+- 新建概念 [[Agent 测评 Eval]]：Eval 主题已跨 3 源（Perplexity 四层 Eval + 腾讯工程化 + Anthropic 博客引用），从 [[Skills 设计方法论]] 第 5 柱独立成页；含两套框架映射（加载 Eval≈触发用例、跨模型 Eval≈模型对比报告）。
+- 更新：[[腾讯程序员]]（第 2 篇源，构成"建 harness + 验 harness"闭环）、[[Skills 设计方法论]]（§5 指向新概念页）、[[Harness Engineering]]（补腾讯测评为支柱五证据）。
+- INDEX：概念区 +1，"企业级 AI Coding 实践"分组 +1 源。
+
+## [2026-08-25] ingest | Cole Medin 黑灯工厂实验
+
+- [[Cole Medin 黑灯工厂实验]] — [[老丁888]] 对 Cole Medin 视频的解读（2026-08-19）：AI Dark Factory = "spec 进、可上线代码出"的自主仓库（第四级自主，人留两盏灯：提 issue + 发版）；三层架构（Archon harness 管道 / Claude Code / Sonnet+Haiku，"模型路由是成本最低的杠杆"）；刻意做笨的 bash 调度器（GitHub 标签即状态机，曾因 LLM 调度"幻听"改纯 bash）；三份治理文件宪法（工厂不可自改 + 禁区一碰即打回）；**holdout 盲测**（builder 不知测试、validator 不知计划）+ 蓝绿部署 + 每周自愈巡检。
+- 新建：实体 [[Cole Medin]]、[[老丁888]]；概念 [[AI Coding 自主度分级]]（pending 升级——去哪儿 L0-L5 + Dan Shapiro 五级双源，L3 分水岭共识："第三级才是多数人该待的地方"）。
+- 更新 4 概念页：[[Harness Engineering]]（第 5 源，个人/小团队样本小节）、[[Agent 测评 Eval]]（holdout=第三种防自欺机制，与腾讯基线互补：基线防漂移、holdout 防挟持验收标准）、[[子代理驱动开发]]（builder/validator 信息隔离与 Superpowers v6.0 怀疑论 reviewer 独立同构）、[[HITL 与 AFK]]（AFK 极端形态 + 两盏灯 + 判断类动作事前置入宪法）。
+- INDEX：实体 +2、概念 +1、源 +1（新分组"AI Coding 自主化"）；pending 移除 L0-L5（已建页），补 Dan Shapiro / Archon / StrongDM holdout。
+- 待观察：调度器脚本未开源（只给行为规格），"完全开源"程度打折；"一行产出代码没看过"限于可机器验证类型，勿普适化。
+
+## [2026-08-25] ingest | TAB 大仓 Harness 工程化实战
+
+- [[TAB 大仓 Harness 工程化实战]] — [[腾讯程序员]]（fitchzheng/leoshli，TAB A/B 实验平台，2026-07-07）：大仓（30+ 微服务）Harness 完整复盘。六层资产（Rule 几乎没写——"能判定的就别留在 Rule 里"；Skill=注意力管理而非能力增强；4 个认知 Agent"能写成 bash 的就别让 Agent 跑"；13 棒接力；7 道门禁；5 个 MCP 读多写少）；最重纪律"**下游不可改上游产物**"；**基线对比反作弊**（B−A 新增失败才阻断，剥夺"历史问题"解释权）+ 软门禁留伤疤；集成测试前置（打回 1.8→0.4）；"**模型对自己生成的东西天然没有否决欲望**"（HITL 的模型层证据）；Team Mode 撞墙复盘（"复杂度自给自足"陷阱 + YAGNI）；"团队要对齐的必须落到仓库，Memory 只放个人偏好"。数字：50+ 需求、端到端 30-75 分钟、人工介入 2-3 次。
+- 更新 6 概念页：[[Harness Engineering]]（第 6 源，大仓实操小节）、[[Agent 测评 Eval]]（基线对比反作弊变体 + 软门禁伤疤）、[[子代理驱动开发]]（TAB 4-Agent 契约 + 下游不可改上游 + "方案一致性"防解释性执行）、[[HITL 与 AFK]]（无否决欲望模型层证据 + 关卡工程化度量）、[[Skills 设计方法论]]（"注意力管理"同源表述）、[[LLM Wiki]]（新增 §8 落盘优先于个人记忆——Harness 视角跨域印证）。
+- [[腾讯程序员]] 实体更新为三部曲（建 + 验 + 稳）。
+- INDEX：源 +1（企业级实践组）、腾讯程序员描述更新、pending 补"复杂度自给自足/YAGNI"与"仓库文档 vs Memory"。
+- 注记：本篇与 [[Harness Engineering 团队落地规范]] 在 Rule 上的程度差异（起步规则共识 vs 成熟态规则脚本化）已在矛盾区标注。
+
+## [2026-08-26] ingest | 批量 3 源：Harness 理论科普 + 十二大工程框架 + 产品经理 AI 工作流
+
+处理 8/25–8/26 新收录的 3 篇文章：
+
+**Harness 理论科普（1 源，新实体 [[ConardLi]]）**：
+- [[Harness Engineering 三次演进与头部实践]] — code秘密花园，2026-04-03（正是腾讯落地文引用的 Harness 详解文）：Prompt→Context→Harness 三次重心迁移（表达/信息/过程问题）+ 六层拆解 + 头部实践（Anthropic Context Reset vs Compaction、generator+evaluator 分离「生产与验收必须分离」；OpenAI「修复方案从来不是更努力，而是缺了什么结构性的能力」；LangChain 不动模型仅改 Harness 榜单 52.8→66.5）。
+- 更新 [[Harness Engineering]]（第 7 源）：新增「演进视角」段与头部实践段；Context Reset 与 [[smart zone]]/[[Matt Pocock 会话边界五问决策树]] 同题异构、为 compact 垫底提供头部公司印证；自评失真 = [[Agent 测评 Eval]]/holdout 盲测的理论根基（推论）。
+
+**企业 Agent 十二大工程（1 源，新实体 [[白墨]]）**：
+- [[企业 Agent 落地十二大工程框架]] — 白哥Agent落地局，2026-07-30，6.6 万字上篇（约 3.5 万字）：六纵（Prompt/Context/Skill/Agent/Harness/Loop）+ 六横（Data/Ontology/Process/Evaluation/Safety-Governance/Product-UX）；独创 Process/Agent/Harness 三方边界、Action 语义模型、Data Agent 三层次与事实-推测-行动信任链、「多 Agent 不默认优于单 Agent」。
+- 更新 [[Harness Engineering]]（第 8 源）：新增白墨十二工程小节；矛盾区升级为**定义谱系四方口径**（ConardLi 最宽 Harness=Agent-Model → 腾讯 6 支柱 → 去哪儿过程控制 → 白墨最窄运行控制面）。
+- 更新 [[智能问数平台]]（第 2 源印证）：Data Agent 三层次、零信任权限拦截、指标口径与五层架构高度同构；新建概念 [[Data Agent]]（双源达标，含信任链 + 底座 + 与 NL2SQL 双源一致否定）。
+
+**产品经理 AI 工作流（1 源，新实体 [[SinKris]]）**：
+- [[产品经理的 AI 工作流]] — Kris产品成长之路，2026-08-03：8 个工作流（需求/竞品/PRD/数据/项目管理/跨部门/个人成长/创意，工具+Prompt+SOP）+ 工作流=标准化+AI 自动化+可复用模板 + 80/20 分工公式 + Obsidian 点名作模板库载体。
+- 关联标注：个人 Prompt 模板库 ≈ 个人版 Skills（推论）；80/20 与 [[HITL 与 AFK]] 判断类人在环呼应；INDEX 新开「个人 AI 工作流（产品管理）」分组。
+
+**INDEX**：实体 +3（ConardLi/白墨/SinKris）、概念 +1（[[Data Agent]]）、源 +3；「企业级 AI Coding 实践（大厂平台）」组改名「企业级 AI Coding 与 Agent 落地实践」收纳非大厂方法论源；pending 更新语义层（第二次出现）、补 Action 语义模型/成熟度 L1-L5/个人模板库≈个人 Skills。
+- 待观察：白墨下篇（Evaluation/Safety/Process/Product-UX + L1-L5 成熟度模型）发布后补全十二工程全貌。
+
+## [2026-08-25] query | 「为什么配置 MCP 而非直接给 agent 数据库凭证」综合 → 沉淀 [[MCP 与直连凭证对比]]
+
+用户读 [[Harness Engineering 团队落地规范]] §5.1 时提问：有数据库地址/用户名/密码，agent 走 Bash+CLI 就能访问，为何还要 MCP？综合作答并沉淀 synthesis：MCP 解决的不是「能不能访问」而是「受控访问」——①权限结构性收窄（工具面无写操作 + readonly_user，呼应 TAB「能判定的就别留在 Rule 里」）；②凭证不进模型上下文（${DB_PASSWORD} 只在 server 进程 env，对照源内「外部模型外传上下文」警告）；③工具面即文档 + 结构化输出省 token；④团队远程部署统一复用。何时不用：个人本地/一次性查询（源 §5.1.1 自认）。confidence: medium（凭证暴露面等部分为通用工程常识，非源内直接论述，页内已标注推论）。

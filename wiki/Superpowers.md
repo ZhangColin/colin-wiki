@@ -11,8 +11,9 @@ sources:
   - "[[Superpowers 6.0 reviewer 只读重写]]"
   - "[[Superpowers + gstack 搭配实战]]"
   - "[[Claude Code 双插件搭配 superpowers 与 gstack]]"
+  - "[[去哪儿网 AI Coding 研发平台实践]]"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-25
 status: active
 aliases:
   - obra/superpowers
@@ -49,6 +50,15 @@ aliases:
 
 表面是"约 2 倍速、近 50% 省 token"，实质是围绕 reviewer 角色的结构性重写：① 两 reviewer 合一（spec + quality 单 reviewer 一次 diff 出两裁决）；② reviewer 变只读怀疑论者（"Do Not Trust the Report"）；③ 文件替代粘贴（上下文经济学）；④ Progress Ledger 对抗 compaction 失忆；⑤ Model 强制声明。详见 [[Superpowers 6.0 reviewer 只读重写]]。
 
+### 7. 企业级定制印证：Qsuperpowers（去哪儿，2026-06）
+
+[[去哪儿网]] 在社区版 Superpowers 之上构建企业定制框架 **Qsuperpowers**——目前已知最完整的大厂生产级采用案例：
+
+- **skill 名原样复用**：四阶段闭环直接使用 brainstorming / writing-plans / **subagent-driven-development** / executing-plans / **test-driven-development** / requesting-code-review（双轮审查）/ finishing-a-development-branch——印证 7 步流程在企业环境有效。
+- **定位边界被明确表述**："通用 superpowers 提供流程标准化能力，但**不包含企业个性化需求、内部系统集成、工程规范落地**"——通用纪律层 + 企业集成层的分层结构。
+- 企业增量在集成而非流程：飞书文档（需求解析）、AST（代码理解）、CI/CD（Noah 部署）、灰霸测试（质量验证）四大接入点。
+- 效果：2pd+ 复杂需求 3pd→1pd、提效 66%、无 bug 上线（自述口径）。详见 [[去哪儿网 AI Coding 研发平台实践]]。
+
 ## 子代理驱动开发
 
 核心公式 "Fresh subagent per task + two-stage review"。把大任务拆成独立子任务，每个子任务过两轮审查（规格合规 + 代码质量），审查者是独立 AI 代理。模型选择原则：机械实现用快速/廉价模型、集成判断用标准模型、架构/审查用最强模型。详见 [[子代理驱动开发]]。
@@ -82,8 +92,8 @@ marketplace 名称不一，以官方 README 为准。
 
 ## 相关页面
 
-- **实体**：[[Jesse Vincent]] · [[gstack]] · [[Garry Tan]]
-- **来源**：[[Superpowers 5万 Star 工程纪律框架]] · [[Superpowers 实战指南 7步流程14技能]] · [[Superpowers 7步闭环工作流深度指南]] · [[Superpowers 7阶段交付SKU库存扣减]] · [[Superpowers 6.0 reviewer 只读重写]] · [[Superpowers + gstack 搭配实战]] · [[Claude Code 双插件搭配 superpowers 与 gstack]]
+- **实体**：[[Jesse Vincent]] · [[gstack]] · [[Garry Tan]] · [[去哪儿网]]
+- **来源**：[[Superpowers 5万 Star 工程纪律框架]] · [[Superpowers 实战指南 7步流程14技能]] · [[Superpowers 7步闭环工作流深度指南]] · [[Superpowers 7阶段交付SKU库存扣减]] · [[Superpowers 6.0 reviewer 只读重写]] · [[Superpowers + gstack 搭配实战]] · [[Claude Code 双插件搭配 superpowers 与 gstack]] · [[去哪儿网 AI Coding 研发平台实践]]
 - **相关概念**：[[子代理驱动开发]] · [[mattpocock skills]] · [[Skills 设计方法论]]
 - **综合**：[[Superpowers 与 mattpocock skills 路线对照]] · [[Superpowers 与 gstack 搭配（大脑与手脚）]]
 - **对照**：[[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] · [[2026 年再看 Superpowers：grill-me 场景选型]]

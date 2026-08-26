@@ -22,7 +22,14 @@
 - [[gstack]] — Garry Tan 的 AI 工程工具集（23 命令 + Sprint 工作流 + 无头浏览器）
 - [[AgentScope Java]] — 开源 Java Agent 运行时框架（HarnessAgent/ReActAgent/Toolkit 三层）
 - [[AI实战有术]] — Dilee（11 年 Java 老兵），AgentScope Java 系列解读作者
-- [[腾讯程序员]] — 公众号（atreusliu），Harness Engineering 团队落地规范作者
+- [[腾讯程序员]] — 公众号（atreusliu/martinskxu/fitchzheng/leoshli），Harness 三部曲：落地规范 + 测评方案 + TAB 大仓实战
+- [[ConardLi]] — 公众号「code秘密花园」，Harness 三次演进理论科普（腾讯落地文引用的理论源）
+- [[白墨]] — 公众号「白哥Agent落地局」，企业 Agent 十二大工程框架作者
+- [[SinKris]] — 公众号「Kris产品成长之路」，产品经理 8 个 AI 工作流（个人级 AI 应用视角）
+- [[去哪儿网]] — 大型 OTA，AI Coding 组织级平台实践（QunarDevCenter / 天弦 QDO / Qsuperpowers）
+- [[爱海贼的无处不在]] — 公众号「无处不在的技术」，业界实践深度解读（去哪儿李佳奇分享）
+- [[Cole Medin]] — coleam00，30+ 开源 skills / Archon / 黑灯工厂实验作者
+- [[老丁888]] — 公众号「钉子之家」，AI 观点解读（Cole Medin 黑灯工厂）
 
 ## 概念 (concept)
 
@@ -35,6 +42,9 @@
 - [[Skills 设计方法论]] — Skills 即上下文工程（Anthropic/Perplexity 共识）：三层成本 + Hub-and-Spoke + Gotchas + 四层 Eval
 - [[智能问数平台]] — NL2SQL 生产级形态：五层架构 + 语义层先行 + 权限贯穿（新领域种子概念）
 - [[Harness Engineering]] — Agent = Model + Harness：6 大支柱的运行环境工程学（OpenAI 提出，腾讯/AgentScope/Matt skills 多路落地）
+- [[Agent 测评 Eval]] — 三类评分器 + 五维度 + 基线机制 + 能力/回归双轨（Perplexity 四层 Eval 与腾讯测评实践合成）
+- [[AI Coding 自主度分级]] — 去哪儿 L0-L5 与 Dan Shapiro 五级双框架对照，L3 分水岭共识
+- [[Data Agent]] — 数据智能消费形态：≠NL2SQL、三层次、事实-推测-行动信任链（白墨 + 智能问数平台双源）
 
 ## 源 (source)
 
@@ -90,7 +100,20 @@
 - [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] — 最小锚点+router vs hook 强制+红旗表 · 2026-07-09
 - [[2026 年再看 Superpowers：grill-me 场景选型]] — grill-me vs Superpowers brainstorming 按目标产物选 · 2026-07-16
 - [[Anthropic 与 Perplexity 的 Skills 设计方法论]] — 两家官方博客综述：9 类/3 层成本/4 层 Eval · 2026-06-12
+
+### 企业级 AI Coding 与 Agent 落地实践
 - [[Harness Engineering 团队落地规范]] — 腾讯团队级落地：6 支柱 + 3 阶段路线图 + harness-audit 审计 · 2026-07-17
+- [[腾讯 Agent 与 Skill 测评方案]] — 腾讯测评体系：三类评分器 + 五维度 + 基线 + TPerf 实战 · 2026-06-16
+- [[去哪儿网 AI Coding 研发平台实践]] — 组织级平台：L0-L5 分级 + Harness 四把锁 + 天弦/Qsuperpowers + Skills 治理 + 双估时 · 2026-06-24
+- [[TAB 大仓 Harness 工程化实战]] — 腾讯 TAB 大仓：六层资产 + 13 棒接力 + 4 Agent 契约 + 基线反作弊 + Team Mode 撞墙复盘 · 2026-07-07
+- [[Harness Engineering 三次演进与头部实践]] — ConardLi 理论科普：Prompt→Context→Harness 三次迁移 + Anthropic/OpenAI/LangChain 实践 · 2026-04-03
+- [[企业 Agent 落地十二大工程框架]] — 白墨：六纵六横十二工程 + Data Agent/Ontology/Action 语义模型（上篇）· 2026-07-30
+
+### 个人 AI 工作流（产品管理）
+- [[产品经理的 AI 工作流]] — SinKris：8 个工作流（工具+Prompt+SOP）+ 80/20 分工公式 · 2026-08-03
+
+### AI Coding 自主化（个人实验与分级框架）
+- [[Cole Medin 黑灯工厂实验]] — Dark Factory：spec 进可上线代码出，治理文件宪法 + holdout 盲测 + 蓝绿部署 + 两盏灯 · 2026-08-19
 
 ### Java Agent 框架（AgentScope）
 - [[AgentScope Java 2.0 正式版]] — v2.0.0 GA：运行时工程定位 + 三框架选型对照 · 2026-07-11
@@ -108,6 +131,7 @@
 - [[mattpocock skills 推荐工作流速查]] — 按"活的大小/类型"给推荐路径（主线四步 / wayfinder 超大活 / 重构 / bug 修复），新手入口、常查导向
 - [[Superpowers 与 mattpocock skills 路线对照]] — 两条 Claude Code skills 路线分歧（强制 vs 最小化）与共存结论
 - [[Superpowers 与 gstack 搭配（大脑与手脚）]] — 双插件搭配范式，飞哥+运维有术独立得出一致结论
+- [[MCP 与直连凭证对比]] — 为什么配置 MCP 而非直接给 agent 数据库凭证：结构性约束 + 凭证不进上下文
 
 ---
 
@@ -126,8 +150,17 @@
 - 会话边界管理（五问决策树：Continue/clear/handoff/subagent/compact）— 已覆盖于 [[Matt Pocock 会话边界五问决策树]] 与 [[smart zone]]，机制已跨多源出现，待独立建页
 - round-by-round frontier — grilling v1.2 推进机制（已覆盖于 [[Matt Skills v1.2 grilling 重构]]）
 - Claude Code — 本 vault 实际使用的 LLM agent
-- 语义层 / Schema Linking — [[智能问数平台]] 核心子机制（1 源，待第二次出现）
+- 语义层 / Schema Linking — [[智能问数平台]] 核心子机制，白墨 Data Agent 章节第二次出现（指标口径、数据源路由），已并入 [[Data Agent]]；是否独立建页待观察
+- Action 语义模型 / Ontology 五阶段 — 白墨十二工程的本体工程核心（1 源，已覆盖于 [[企业 Agent 落地十二大工程框架]]），待第二次出现
+- 企业 Agent 成熟度模型（L1-L5）— 白墨十二工程框架下篇将展开（上篇仅预告）
+- 个人 Prompt 模板库 ≈ 个人版 Skills — SinKris 工作流与 Skills 的映射（推论，1 源，已覆盖于 [[产品经理的 AI 工作流]]）
 - OpenAI — Harness Engineering 概念出处（2026-02 文章），暂在 [[Harness Engineering]] 内提及
+- 双估时 / AI 估时压缩率与兑现率 — AI 提效进入排期计划的度量机制（1 源，已覆盖于 [[去哪儿网 AI Coding 研发平台实践]]）
+- T/M/C 指标 / 出码率 Git Blame 法 — AI 参与度三指标与"人写 vs AI 写"区分方法（1 源，同上）
+- Dan Shapiro — Glowforge 创始人，五级自主框架与"黑灯工厂"命名出处（暂在 [[AI Coding 自主度分级]] / [[Cole Medin 黑灯工厂实验]] 内提及）
+- Archon / StrongDM holdout / Spotify Honk / Gas Town — 黑灯工厂谱系工具与前人尝试（暂在 [[Cole Medin 黑灯工厂实验]] 内提及）
+- "复杂度自给自足"陷阱 / Harness 设计中的 YAGNI — TAB 撞墙复盘提炼（1 源，已覆盖于 [[TAB 大仓 Harness 工程化实战]]）
+- 仓库文档 vs Memory（团队共识落仓库）— 已在 [[LLM Wiki]] §8 与 [[TAB 大仓 Harness 工程化实战]] 双向印证，是否独立建页待观察
 
 **实体**（被提及但非专段讨论）：
 - Codex / Cursor / OpenCode — 其他可用 LLM agent

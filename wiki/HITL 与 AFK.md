@@ -2,14 +2,16 @@
 type: concept
 title: HITL 与 AFK
 domain: [AI编程, 软件工程]
-tags: [HITL, AFK, 人机协作, 前台后台并行, 人机分工]
+tags: [HITL, AFK, 人机协作, 前台后台并行, 人机分工, 黑灯工厂]
 sources:
   - "[[Matt Pocock 后台 research 与主线程并行]]"
   - "[[Matt Pocock skills Wayfinder 官方文档]]"
   - "[[Matt Pocock wayfinder handoff 接力协议]]"
   - "[[Matt Pocock 三条 on-ramp 分流]]"
+  - "[[Cole Medin 黑灯工厂实验]]"
+  - "[[TAB 大仓 Harness 工程化实战]]"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-25
 status: active
 aliases:
   - HITL / AFK
@@ -59,6 +61,25 @@ v1.2 毕业的 `wizard` 补上了 HITL 谱系的第三种形态——**脚本化
 
 详见 [[Matt Pocock wizard 人墙自动化]]。
 
+## HITL 必要性的模型层证据（TAB，2026-07）
+
+[[TAB 大仓 Harness 工程化实战]] 实测后给出关键节点必须留人的**机理级解释**：
+
+- 试过用 Reviewer Agent 判"方案能否进开发"，结论不行——**"模型对自己生成的东西天然没有否决欲望"**：上游 Agent 写的方案，下游 Agent 99% 觉得"看上去挺好"。这个偏置是**模型层面的，不是 prompt 层面能控制的**。
+- 工程化度量：5 个人工关卡（需求确认 10–30 秒 / 方案确认条件触发 / 熔断暂停——任意阶段连续打回 ≥3 次）；硬约束"**不能让用户每分钟点一次以上**"，否则体感退化成"全人工 + AI 假装在帮忙"，团队会绕过工具退回 Vibe Coding。
+- 三级兜底（UI 按钮 / 文本关键词 / 语义识别）：人工关卡不是"等待输入"，是"以最低摩擦听懂人想干什么"。
+- 金句："半自动比全自动更难，但更值得做——它是当前 AI 能力下唯一稳定可推广的形态。"
+
+## AFK 的极端形态：黑灯工厂与"两盏灯"（2026-08）
+
+[[Cole Medin 黑灯工厂实验]] 是 AFK 谱系的已知最右端——整条"分诊→实现→验证→合并→部署"流水线无人值守，但即便在第四级自主度上仍保留**最小 HITL："两盏灯"——入口（人提交 issue）、出口（人发布版本）**。这与本页判据完全自洽：
+
+- **机械执行才归自动化**：调度器刻意做笨（纯 bash、无 LLM 决策）——曾让模型派发任务导致"幻听"，印证"决策不轻信模型"。
+- **判断类动作固化为人不可碰的边界**：认证/流量控制/部署配置/治理文件进禁区清单，任何 PR 一碰即打回——把"需要人把关的事"从运行时把关改为**事前置入宪法**。
+- agent 有权拒绝 spec（"超出范围/太复杂"）——HITL 的判断职能部分上移给受约束的 agent，但宪法本身人写且工厂不可自改。
+
+与 wayfinder 的对照：wayfinder 是**会话级**人机分工（这张票 HITL 还是 AFK），黑灯工厂是**系统级**人机分工（哪些环节永远留灯）。
+
 ## handoff ≠ AFK（易混点澄清）
 
 两者都用写文件、留指针作为交接手段，但语义完全不同：
@@ -80,4 +101,4 @@ v1.2 毕业的 `wizard` 补上了 HITL 谱系的第三种形态——**脚本化
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock 后台 research 与主线程并行]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock 三条 on-ramp 分流]] · [[Matt Pocock skills Handoff 官方文档]] · [[Matt Pocock wizard 人墙自动化]] · [[Matt Pocock 会话边界五问决策树]] · [[smart zone]]
+- [[mattpocock skills]] · [[Matt Pocock 后台 research 与主线程并行]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock 三条 on-ramp 分流]] · [[Matt Pocock skills Handoff 官方文档]] · [[Matt Pocock wizard 人墙自动化]] · [[Matt Pocock 会话边界五问决策树]] · [[Cole Medin 黑灯工厂实验]] · [[TAB 大仓 Harness 工程化实战]] · [[AI Coding 自主度分级]] · [[smart zone]]

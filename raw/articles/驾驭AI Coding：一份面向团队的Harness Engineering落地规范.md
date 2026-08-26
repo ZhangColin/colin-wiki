@@ -1,12 +1,13 @@
 ---
-title: "驾驭AI Coding：一份面向团队的Harness Engineering落地规范"
-source: "https://mp.weixin.qq.com/s/g4nTfxm7ebzRwkAVIGdIbg"
+title: 驾驭AI Coding：一份面向团队的Harness Engineering落地规范
+source: https://mp.weixin.qq.com/s/g4nTfxm7ebzRwkAVIGdIbg
 author:
   - "[[腾讯程序员]]"
 published:
 created: 2026-08-13
-description: "把\x26quot;好代码\x26quot;标准写进系统里，让 AI 在约束下自己干活"
+description: 把&quot;好代码&quot;标准写进系统里，让 AI 在约束下自己干活
 tags:
+  - AI开发平台
 ---
 腾讯程序员 腾讯技术工程 *2026年7月17日 17:36*
 

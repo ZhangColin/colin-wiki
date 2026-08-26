@@ -12,8 +12,9 @@ tags:
 sources:
   - "[[LLM Wiki 方法论 gist]]"
   - "[[Karpathy 的 LLM Wiki 搭建实战]]"
+  - "[[TAB 大仓 Harness 工程化实战]]"
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-08-25
 status: active
 aliases:
   - LLM Wiki 模式
@@ -70,10 +71,15 @@ aliases:
 
 维护知识库累人的不是读/想，是**记账**。人类因维护成本增长快于价值而放弃 wiki。LLM 不无聊、不忘更新交叉引用、能一次碰十几个文件还一致——**记账被外部化给 LLM，对用户维护成本趋近于零**。思想源头是 [[Vannevar Bush]] 1945 的 Memex：他有愿景，没解决"谁维护"，LLM 补上了。
 
+### 8. 落盘优先于个人记忆（跨域印证，2026-07）
+
+[[TAB 大仓 Harness 工程化实战]] 从完全不同的场景（Agent 大仓工程化）独立得出同一结论：**"仓库文档是团队共识，能审计、能交接；Memory 是个人偏好，看不见、对不齐——4 个工程师的 Memory 会互相矛盾。团队要对齐的东西必须落到仓库，Memory 只放纯个人偏好。"** 其两层仓库内索引（代码导航地图"谁动谁更新" + 跨需求任务看板）与 LLM Wiki 的 INDEX/LOG 同构——持久落盘资产优于易散的个人记忆/会话上下文，这一原则在知识管理与 Harness 工程两个领域同时成立。
+
 ## 证据 / 来源
 
 - [[LLM Wiki 方法论 gist]] — Karpathy 原文，抽象模式（core idea、architecture、operations、indexing/logging、why this works）。
 - [[Karpathy 的 LLM Wiki 搭建实战]] — [[运维有术]] 的中文解读 + Obsidian 落地（目录、frontmatter 字段、建页规则、初始化步骤）。
+- [[TAB 大仓 Harness 工程化实战]] — Harness 视角的跨域印证（Memory vs 仓库文档 / 两层项目索引）。
 
 ## ⚠️ 矛盾 / 未解问题
 
@@ -86,6 +92,6 @@ colin-wiki 对模式有几处**有意本地化**（详见 [[Karpathy 的 LLM Wik
 
 ## 相关页面
 
-- **来源**：[[LLM Wiki 方法论 gist]] · [[Karpathy 的 LLM Wiki 搭建实战]]
+- **来源**：[[LLM Wiki 方法论 gist]] · [[Karpathy 的 LLM Wiki 搭建实战]] · [[TAB 大仓 Harness 工程化实战]]
 - **实体**：[[Andrej Karpathy]] · [[Vannevar Bush]] · [[Obsidian]] · [[Dataview]] · [[运维有术]]
 - *待建概念（pending，≥2 独立来源脉络再正式建）：RAG · Ingest · Query · Lint · Memex · Schema/AGENTS.md*

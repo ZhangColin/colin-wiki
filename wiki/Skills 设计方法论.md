@@ -7,8 +7,10 @@ sources:
   - "[[Anthropic 与 Perplexity 的 Skills 设计方法论]]"
   - "[[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]]"
   - "[[Matt Pocock writing-great-skills 八词诊断]]"
+  - "[[去哪儿网 AI Coding 研发平台实践]]"
+  - "[[TAB 大仓 Harness 工程化实战]]"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-25
 status: active
 aliases:
   - Skills 即上下文工程
@@ -25,6 +27,8 @@ aliases:
 ### 1. Skills = 上下文工程
 
 Prompt Engineering 优化单次指令；Context Engineering 关注模型决策前如何组织所有相关信息（结构、优先级、加载时机）。把 Skill 当 prompt 写会踩坑：一次性堆一个文件、用描述性语言写功能说明而非触发条件、让模型自己写 Skills。**LLM 自己写的 Skills 平均无收益**（[[Perplexity]] 原话）。
+
+**同源新表述（TAB，2026-07）**：[[TAB 大仓 Harness 工程化实战]] 的提法——"**Skill 不是 AI 的能力增强，是 AI 的注意力管理**"：把"这类任务怎么做"的规范从主 prompt 拆出去按需加载，防止主 prompt 膨胀淹没需求上下文、防止改一条规矩要同步每个 Agent。与"上下文工程"同一本质的两种说法。
 
 ### 2. 三层成本模型（[[Perplexity]]）
 
@@ -43,11 +47,20 @@ agent 失败→加 gotcha；不该加载却加载→收紧 description+加负面
 
 ### 5. 四层 Eval 套件（[[Perplexity]]）
 
-Skill 加载 Eval（精度+召回）→ 渐进加载 Eval（读对 spoke 文件）→ 端到端任务 Eval（LLM judge）→ 跨模型 Eval。Step 0 写 Evals 最先（负面示例比正面更重要）。
+Skill 加载 Eval（精度+召回）→ 渐进加载 Eval（读对 spoke 文件）→ 端到端任务 Eval（LLM judge）→ 跨模型 Eval。Step 0 写 Evals 最先（负面示例比正面更重要）。→ Eval 已独立建页 [[Agent 测评 Eval]]（与腾讯三类评分器/五维度实践合成）。
 
 ### 6. Description 是路由触发器，不是功能文档
 
 以 "Load when..." 开头 ≤50 字。公认最难写的部分。
+
+### 7. 企业级治理实践：去哪儿 Skills Gateway（2026-06）
+
+[[去哪儿网]] 把本方法论推进到**组织资产治理**层（50 Skills / 4 Domain）：
+
+- **流转闭环**：团队私有仓验证 → PR 提交标准仓 → 基础研发团队审核（边界/安全/通用性/依赖）→ 合并统一分发——"创新在线，标准化在平台"。
+- **Skills Gateway 统一收口**：下发 / 执行 / 观测 / 分析四合一，沉淀 usage、成功率、复用率、**失效点**——失效点分析与 Gotchas 飞轮同构（前者靠线上观测数据，后者靠 evals，两条路径互补）。
+- **种子上下文**：skill 执行前注入任务背景/目标/历史进展/当前阶段/上下游依赖——本质是"上下文工程"在 skill 运行时的组织化实现，补上"skill 只看当前输入"的盲区。
+- Skill 市场：可搜索 + 下载量/版本/共享方元信息——skill 资产的产品化（App Store 模式）。
 
 ## 与 [[mattpocock skills]] / [[Superpowers]] 的同源
 
@@ -63,4 +76,4 @@ Skill 加载 Eval（精度+召回）→ 渐进加载 Eval（读对 spoke 文件�
 
 ## 相关页面
 
-- [[Anthropic]] · [[Perplexity]] · [[Anthropic 与 Perplexity 的 Skills 设计方法论]] · [[mattpocock skills]] · [[Superpowers]] · [[Matt Pocock writing-great-skills 八词诊断]] · [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] · [[LLM Wiki]]
+- [[Anthropic]] · [[Perplexity]] · [[去哪儿网]] · [[Anthropic 与 Perplexity 的 Skills 设计方法论]] · [[去哪儿网 AI Coding 研发平台实践]] · [[TAB 大仓 Harness 工程化实战]] · [[mattpocock skills]] · [[Superpowers]] · [[Matt Pocock writing-great-skills 八词诊断]] · [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] · [[LLM Wiki]]
