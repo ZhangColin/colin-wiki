@@ -17,7 +17,7 @@ source_url: "https://github.com/mattpocock/skills/blob/main/skills/engineering/w
 author: "Matt Pocock"
 date_published: 2026-07-08
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-09
 status: active
 aliases:
   - Wayfinder SKILL
@@ -112,7 +112,8 @@ aliases:
 
 - 与 [[MattPocock Skills v1.1 重磅更新]] 一致，无矛盾；本页为操作细节的**一手权威源**，中文页为概括。
 - *未解*（[[mattpocock skills]] 已记）：Wayfinder 是否会向中型项目下沉、取代基础四步，待后续版本观察。
+- **教学实战篇补充（2026-09-09 注记）**：[[wayfinder 迷雾地图实战]]（[[超级奶爸老谭]]）与本页机制高度一致（四件套/四类 ticket/chart-work/先 claim 再动手/map=索引不是仓库/Not yet specified 判据），并补 gh 命令实战与 EShop 策略链重构案例；但该文在 grill-me 与 grill-with-docs 间自相混用，且未提 v1.2（research 票并行等），按 v1.1 教学口径理解。
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock skills v1.1 官方更新日志]] · [[MattPocock Skills v1.1 重磅更新]] · [[Matt Pocock]]
+- [[mattpocock skills]] · [[Matt Pocock skills v1.1 官方更新日志]] · [[MattPocock Skills v1.1 重磅更新]] · [[Matt Pocock]] · [[wayfinder 迷雾地图实战]] · [[Matt Pocock wayfinder handoff 接力协议]]

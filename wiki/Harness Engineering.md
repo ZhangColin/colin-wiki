@@ -13,8 +13,9 @@ sources:
   - "[[Cole Medin 黑灯工厂实验]]"
   - "[[TAB 大仓 Harness 工程化实战]]"
   - "[[企业 Agent 落地十二大工程框架]]"
+  - "[[DeepSeek Harness 源码拆解]]"
 created: 2026-08-17
-updated: 2026-08-26
+updated: 2026-09-09
 status: active
 aliases:
   - 驾驭工程
@@ -112,6 +113,15 @@ LangChain 工程师定义：**Harness = Agent - Model**。「模型的能力上�
 - **对 6 支柱的补全**：白墨把 OpenAI 支柱里较隐性的部分独立成工程——Ontology（业务语义底座，含 Action 语义模型、状态机、指标口径）、Data（数据源权威性、可信数据管道）、Process（端到端业务流转）、Loop（错误归因到具体工程层 + 全要素版本快照）、Safety-Governance、Product-UX——是企业级落地的「工程清单化」。
 - 关键取舍观：「多 Agent 不是默认优于单 Agent」；本体「不能过早重型建设」；「持续进化≠不受控自动改生产」（五道生产安全闸门）。
 
+### 开源运行时底座（DeepSeek Harness，2026-08）
+
+[[DeepSeek Harness 源码拆解]]（[[翟星人的实验室]]）给出「Agent = Model + Harness」公式的**开源框架级实现**（MIT，约 80k stars，Developer Preview），与前面的大厂平台/方法论样本互补：
+
+- **Everything is a plugin**：基于 [[Cordis]] 插件运行时，模型适配、工具、会话、Loop、沙箱、子 Agent、MCP Client、Skill Provider、Hook Bridge 全部插件化——Hook Bridge 把 Claude Code/Codex 的 hooks.json 翻译成 Cordis 拦截点，三套机制一套生命周期。
+- **Harness 六个关切的具体实现**：上下文管理（System Prompt 插件化 Section 注册 + 前缀稳定复用 KV Cache + AGENTS.md 字节预算）、状态与记忆（Session Event Log 事实流 + 多投影，见 [[Session Event Log]]）、权限（软 System Prompt / 硬 Guard+文件策略两层 + 单调 Guard + SandboxMode 三档仅约束文件副作用）、约束恢复（工具调用先记 `tool/call` 再执行、崩溃恢复语义「开始过、结果未知」）、执行编排（Turn/Step 两级循环 + 子 Agent Spawn/Fork/composeFrom）。
+- **缺口印证 Eval 支柱**：BENCHMARK.md 只讲怎么跑、无公开结果/轨迹/权限/Token 预算/失败口径——正是 [[腾讯 Agent 与 Skill 测评方案]]「基线反作弊」要解决的框架层问题。
+- **范式对比**：LangChain 向上封装（降开发门槛）vs DSH 向下拆开（框架层透明）；与 [[AgentScope Java]] 形成「Java 轻量 vs 插件化重量」对照。
+
 ## 与本 wiki 其他概念的关系（跨源同构）
 
 - **[[mattpocock skills]] / [[Superpowers]] 本质都是 harness**：SKILL.md + 触发机制 + 工程纪律 = 给模型装的"马具"；Matt v1.2 的 harness-neutral（#781 去专有工具名）与双 harness 支持（Claude/Codex）正是"同一 harness 跨模型"的方向。
@@ -120,6 +130,7 @@ LangChain 工程师定义：**Harness = Agent - Model**。「模型的能力上�
 - **[[Skills 设计方法论]]（Anthropic/Perplexity）** 对应支柱一（上下文管理）与支柱二（Skills）的理论化；其 Eval 柱已独立展开为 [[Agent 测评 Eval]]——腾讯两篇（落地规范 + 测评方案）分别对应支柱三（执行编排）与支柱五（评估与观测）的"建 + 验"闭环。
 - **[[去哪儿网]] 是 harness 的大厂平台化样本**：四把锁与 6 大支柱同构（触发↔工具系统、门禁↔约束、隔离↔恢复、审查↔评估观测），并把"Harness 等级"本身做成可度量的质量指标；[[Cole Medin]] 是个人/小团队样本——同一公式（Agent+Model+Harness）在两个尺度上都成立。
 - **[[LLM Wiki]]（本 wiki 自身）**：CLAUDE.md/AGENTS.md + templates + INDEX/LOG 也是一种 harness——规则即马具；TAB 样本"团队要对齐的必须落到仓库、Memory 只放个人偏好"从 Harness 视角独立印证了这一主张。
+- **[[DeepSeek Harness]] 与 [[从 Chat UI 到 Agent UI]] 是同一事实流的后端与前端**：DSH 的 Session Event Log（事实流+多投影、presentCall/presentResult）与 Agent UI 的 Snapshot+Event Log+Live Stream、Tool Renderer Registry 三组同构——「执行状态可解释、可恢复」是 harness 从后端到前端的一致目标，已沉淀 [[Session Event Log]]。
 
 ## ⚠️ 矛盾 / 未解问题
 
@@ -130,7 +141,8 @@ LangChain 工程师定义：**Harness = Agent - Model**。「模型的能力上�
   - **最窄**（[[白墨]]）：Harness = 十二工程之一的**运行控制面**（调度/路由/监控/恢复），Prompt/Context/Skill/Agent/Loop 被拆为独立工程——白墨十二工程整体≈最宽口径的 Harness 工程清单化。
   - 引用时需注明口径；OpenAI/腾讯"赋能型基础设施"与去哪儿"控制型能力"组合起来才是完整定义。
 - 工具链细节（CodeBuddy/Knot/工蜂/TAPD）为腾讯内网生态，外部读者只能借鉴方法论骨架（6 支柱/SOP/审计思路），不能照抄配置。
+- DSH 的「约 80k stars」为 2026-08-14 时点数据；其缓存优势归因（一半模型、一半 Harness 前缀稳定）纠正了网上「全归功于 DSH」口径；Developer Preview 阶段官方明示兼容性破坏，架构细节可能随版本变化。
 
 ## 相关页面
 
-- [[腾讯程序员]] · [[ConardLi]] · [[白墨]] · [[去哪儿网]] · [[Cole Medin]] · [[Harness Engineering 团队落地规范]] · [[Harness Engineering 三次演进与头部实践]] · [[企业 Agent 落地十二大工程框架]] · [[TAB 大仓 Harness 工程化实战]] · [[去哪儿网 AI Coding 研发平台实践]] · [[Cole Medin 黑灯工厂实验]] · [[AgentScope Java]] · [[mattpocock skills]] · [[Superpowers]] · [[Skills 设计方法论]] · [[LLM Wiki]]
+- [[腾讯程序员]] · [[ConardLi]] · [[白墨]] · [[去哪儿网]] · [[Cole Medin]] · [[Harness Engineering 团队落地规范]] · [[Harness Engineering 三次演进与头部实践]] · [[企业 Agent 落地十二大工程框架]] · [[TAB 大仓 Harness 工程化实战]] · [[去哪儿网 AI Coding 研发平台实践]] · [[Cole Medin 黑灯工厂实验]] · [[AgentScope Java]] · [[mattpocock skills]] · [[Superpowers]] · [[Skills 设计方法论]] · [[LLM Wiki]] · [[DeepSeek Harness]] · [[DeepSeek Harness 源码拆解]] · [[Session Event Log]] · [[从 Chat UI 到 Agent UI]]

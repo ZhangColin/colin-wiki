@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s?__biz=Mzg4MzcyOTQ2NQ==&mid=2247491490&id
 author: "[[运维有术]]"
 date_published: "2026-07-22"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-09
 status: active
 aliases: [diagnosing-bugs, /diagnosing-bugs, tdd, /tdd, red-capable command, tracer bullet]
 ---
@@ -47,7 +47,8 @@ aliases: [diagnosing-bugs, /diagnosing-bugs, tdd, /tdd, red-capable command, tra
 - **与 Superpowers 的覆盖争议**：本 vault 自用的 [[Superpowers]] `systematic-debugging`（4 阶段）与本源 `/diagnosing-bugs`（6 阶段 + red-capable command 硬约束）覆盖同一领域但实现不同，"不能无条件互换"。
 - **数据缺口**：6 阶段流程的实测 ROI 无公开数据；"Build the right feedback loop, and the bug is 90% fixed" 是作者经验性比喻非对照数据。
 - **非官方**：mattpocock/skills 是事实标准但非 Anthropic 官方背书。
+- **教学简化版差异（2026-09-09 注记）**：[[tdd 与 diagnosing-bugs 反馈回路]]（[[超级奶爸老谭]] 系列 06 课）给出老谭版六步（复现→最小化→假设→插桩→修复→回归），与官方 6 阶段非一一对应——缺 Phase 1「red-capable command」硬约束（本页强调的入场券）与 Phase 6 Cleanup+post-mortem；tdd 侧未提 tracer bullet / pre-agreed seam / mocking 边界。引用老谭版时与本页并排标注，不推翻本页口径。
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[Superpowers]] · [[mattpocock skills 推荐工作流速查]]
+- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[Superpowers]] · [[mattpocock skills 推荐工作流速查]] · [[tdd 与 diagnosing-bugs 反馈回路]] · [[超级奶爸老谭]]

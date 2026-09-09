@@ -13,8 +13,11 @@ sources:
   - "[[Matt Pocock 完整工作流视频]]"
   - "[[MattPocock Skills v1.1 重磅更新]]"
   - "[[mattpocock skills 标准工作流]]"
+  - "[[mattpocock skills 完全入门指南]]"
+  - "[[loop-me 循环委托自动化]]"
+  - "[[teach 跨会话教学]]"
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-09-09
 status: active
 aliases:
   - mattpocock
@@ -44,8 +47,10 @@ TypeScript 社区大 V（"Total TypeScript" 作者、AI Hero 创办人）。近�
 - 长期：Total TypeScript 教育事业。
 - 2026-07-16：发布 [[Matt Pocock 完整工作流视频]]——skills repo 首份完整 tutorial（录制时 162K★）。
 - 2026-07（v1.1）：发布 v1.1 大版本（Wayfinder、命令更名、SDLC 闭环），见 [[MattPocock Skills v1.1 重磅更新]]。
+- 2026-08-05（v1.2）：grilling round-by-round 重构 + wizard/to-questionnaire/wait-what 三新技能 + Claude 官方插件 + Codex 双 harness，见 [[Matt Pocock Skills v1.2 更新全景]]。
+- 2026-08 中文教学化传播：[[超级奶爸老谭]] 以 12 篇系列（四坑→解药教学路线图）解读 skills——期间披露 in-progress 草稿技能 loop-me / batch-grill-me（后者已并入 v1.2 grilling 本体）、正式技能 teach 与 improve-codebase-architecture 的教学化拆解。
 - 持续：通过 newsletter 迭代 skills，"always trying to get this loop faster, better, easier to run"。
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock 完整工作流视频]] · [[MattPocock Skills v1.1 重磅更新]] · [[小匠Skills]]
+- [[mattpocock skills]] · [[Matt Pocock 完整工作流视频]] · [[MattPocock Skills v1.1 重磅更新]] · [[小匠Skills]] · [[超级奶爸老谭]] · [[Matt Pocock Skills v1.2 更新全景]]

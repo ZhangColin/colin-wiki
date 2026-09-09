@@ -18,7 +18,7 @@ sources:
   - "[[mattpocock skills 标准工作流]]"
   - "[[mattpocock skills 秒杀系统实战]]"
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-09
 status: active
 confidence: high
 aliases:
@@ -140,6 +140,15 @@ aliases:
 
 本 vault（colin-wiki）自用的是 **superpowers** 体系（`brainstorming` / `systematic-debugging` / `tdd` 等），**没有** mattpocock 的 `/` 命令。要用真版需在目标工程 repo 跑 `npx skills add mattpocock/skills`。两者理念同源（grilling 对应 brainstorming 的深化版），差异详见 [[mattpocock skills]] 的"本地化对照"段。
 
+## 扩展场景（2026-08 教学系列补充）
+
+主线之外的四类活（[[超级奶爸老谭]] 教学系列揭示，v1.1 口径快照）：
+
+- **代码库变浆糊** → `/improve-codebase-architecture`（只读体检 → 挑候选 → grilling 聊深模块怎么切），详见 [[improve-codebase-architecture 代码库体检]]。
+- **反复发生的琐事** → `/loop-me`（in-progress 草稿：把循环访谈成 workflow spec，Push right 到最晚检查点），详见 [[loop-me 循环委托自动化]]。
+- **学新东西总忘** → `/teach`（正式技能：有状态教学工作区 + 学习记录），详见 [[teach 跨会话教学]]。
+- **需求问题很多但不用深想** → `/batch-grill-me`（已并入 v1.2 grilling 本体：一轮问完 frontier），详见 [[batch-grill-me 批量访谈]]。
+
 ## 结论
 
 新手记住三件事：
@@ -158,7 +167,8 @@ aliases:
 - [[MattPocock Skills v1.1 重磅更新]] — [[小匠Skills]] 中文 v1.1 概括，含四条工作流变体
 - [[mattpocock skills 标准工作流]] — [[小匠Skills]] 中文 v1.0 总览
 - [[mattpocock skills 秒杀系统实战]] — [[AI随风随风]] 实战第二视角
+- [[mattpocock skills 完全入门指南]] / [[loop-me 循环委托自动化]] / [[teach 跨会话教学]] / [[improve-codebase-architecture 代码库体检]] — [[超级奶爸老谭]] 教学系列（v1.1 口径）
 
 ## 相关页面
 
-- [[mattpocock skills]]（concept 统领，百科式） · [[Matt Pocock]] · [[小匠Skills]]
+- [[mattpocock skills]]（concept 统领，百科式） · [[Matt Pocock]] · [[小匠Skills]] · [[超级奶爸老谭]]

@@ -12,6 +12,7 @@
 - [[运维有术]] — 公众号「术哥无界」，本 wiki 被引用最多的作者（LLM Wiki + mattpocock/Superpowers/gstack 三大系列源码解读）
 - [[Matt Pocock]] — TypeScript 教育者/Total TypeScript 作者，mattpocock skills 作者
 - [[小匠Skills]] — 公众号，中文圈 mattpocock skills 主要解读者（v1.0 总览/v1.1 更新/视频搬运系列）
+- [[超级奶爸老谭]] — 公众号，mattpocock skills 教学路线图作者（主系列 7 课 + 5 专题共 12 篇全收录，EShop 案例贯穿，v1.1 口径快照）
 - [[AI随风随风]] — B 站 UP，mattpocock skills 秒杀系统实战 demo 作者（第三方第二视角）
 - [[鸟窝]] — Go 圈博主（smallnest），用 pigo 实测 Matt Pocock skills，提供外部使用者视角
 - [[飞哥]] — 公众号「刷屏AI」/Vibe Coding，最早（2026-04-07）提出 superpowers+gstack 搭配
@@ -30,6 +31,10 @@
 - [[爱海贼的无处不在]] — 公众号「无处不在的技术」，业界实践深度解读（去哪儿李佳奇分享）
 - [[Cole Medin]] — coleam00，30+ 开源 skills / Archon / 黑灯工厂实验作者
 - [[老丁888]] — 公众号「钉子之家」，AI 观点解读（Cole Medin 黑灯工厂）
+- [[翟星人的实验室]] — 公众号，DeepSeek Harness 源码级解读（Pi 深度玩家视角，预告下篇拆 Cordis）
+- [[炼丹上岸]] — 公众号，Agent UI 设计方法论（Chat UI → Agent UI 八类对象/Message Part/Run 状态机）
+- [[DeepSeek Harness]] — DeepSeek 开源 Agent 运行时底座（MIT，Everything is a plugin，Cordis 装配）
+- [[Cordis]] — 开源插件运行时，DeepSeek Harness 的底座（Service/Event/Effect/Scope）
 
 ## 概念 (concept)
 
@@ -45,6 +50,7 @@
 - [[Agent 测评 Eval]] — 三类评分器 + 五维度 + 基线机制 + 能力/回归双轨（Perplexity 四层 Eval 与腾讯测评实践合成）
 - [[AI Coding 自主度分级]] — 去哪儿 L0-L5 与 Dan Shapiro 五级双框架对照，L3 分水岭共识
 - [[Data Agent]] — 数据智能消费形态：≠NL2SQL、三层次、事实-推测-行动信任链（白墨 + 智能问数平台双源）
+- [[Session Event Log]] — Agent 会话持久化模式：事实流 + 多投影（DSH 后端 + Agent UI 前端双源同构）
 
 ## 源 (source)
 
@@ -84,6 +90,20 @@
 - [[Matt Pocock 会话边界五问决策树]] — PHASE-BOUNDARIES：Continue/clear/handoff/subagent/compact，compact 垫底 · 2026-08-13
 - [[Matt Pocock Skills v1.2 更新全景]] — 4 处人机边界位移 + 双平台三态 + 24 promoted skills · 2026-08-14
 
+### mattpocock skills — 老谭教学系列（2026-08，v1.1 口径快照）
+- [[mattpocock skills 完全入门指南]] — 01 开关：四坑→解药骨架 + 两种安装 + 边界清单 · 2026-08-03
+- [[mattpocock skills 设计灵魂]] — 02 地图：先有坑后有技能的设计逻辑 + 积木 vs 框架 · 2026-08-04
+- [[CONTEXT.md 领域词典]] — 03 词典：<30 行领域宪法 + 三种建法 + 语义扩散防御 · 2026-08-05
+- [[grill 家族与需求冰山]] — 04 访谈：冰山模型 + grill 三兄弟（引擎/壳）+ EShop 4 问实录 · 2026-08-06
+- [[to-spec 流水线对话变代码]] — 05 流水线：grill→to-spec→to-tickets→implement，对话是沙文档是石 · 2026-08-07
+- [[tdd 与 diagnosing-bugs 反馈回路]] — 06 反馈：红绿重构 + 六步排错（教学简化版）+ 覆盖率批判 · 2026-08-10
+- [[mattpocock skills 八环节组装]] — 07 组装：八环节完整链 + 渐进引入 4 周计划 · 2026-08-11
+- [[wayfinder 迷雾地图实战]] — 专题：四件套/四类工单/Charting 7 步 + gh 命令实战 · 2026-08-12
+- [[loop-me 循环委托自动化]] — 专题：重复的事访谈成 workflow spec（in-progress 草稿）· 2026-08-13
+- [[batch-grill-me 批量访谈]] — 专题：设计树+frontier+round 一轮问完（已并入 v1.2 grilling 本体）· 2026-08-14
+- [[teach 跨会话教学]] — 专题：教学工作区七件套 + 流利 vs 存储强度 · 2026-08-17
+- [[improve-codebase-architecture 代码库体检]] — 专题：只读体检三步 + 深浅模块 + 删除测试 · 2026-08-18
+
 ### Superpowers
 - [[Superpowers 5万 Star 工程纪律框架]] — 7 阶段强制流程概览（v4.3） · 2026-02-15
 - [[Superpowers 实战指南 7步流程14技能]] — 14 技能四分类 + 3 铁律（v5.0.7） · 2026-04-09
@@ -108,6 +128,10 @@
 - [[TAB 大仓 Harness 工程化实战]] — 腾讯 TAB 大仓：六层资产 + 13 棒接力 + 4 Agent 契约 + 基线反作弊 + Team Mode 撞墙复盘 · 2026-07-07
 - [[Harness Engineering 三次演进与头部实践]] — ConardLi 理论科普：Prompt→Context→Harness 三次迁移 + Anthropic/OpenAI/LangChain 实践 · 2026-04-03
 - [[企业 Agent 落地十二大工程框架]] — 白墨：六纵六横十二工程 + Data Agent/Ontology/Action 语义模型（上篇）· 2026-07-30
+- [[DeepSeek Harness 源码拆解]] — 翟星人：DSH 插件运行时/四层装配/Session Event Log/子 Agent 模型 + 五家横评 · 2026-08-14
+
+### Agent 运行时与 UI（新领域）
+- [[从 Chat UI 到 Agent UI]] — 炼丹上岸：八类设计对象 + Message Part + Run 状态机 + Snapshot/EventLog 恢复 · 2026-08-30
 
 ### 个人 AI 工作流（产品管理）
 - [[产品经理的 AI 工作流]] — SinKris：8 个工作流（工具+Prompt+SOP）+ 80/20 分工公式 · 2026-08-03
@@ -161,6 +185,9 @@
 - Archon / StrongDM holdout / Spotify Honk / Gas Town — 黑灯工厂谱系工具与前人尝试（暂在 [[Cole Medin 黑灯工厂实验]] 内提及）
 - "复杂度自给自足"陷阱 / Harness 设计中的 YAGNI — TAB 撞墙复盘提炼（1 源，已覆盖于 [[TAB 大仓 Harness 工程化实战]]）
 - 仓库文档 vs Memory（团队共识落仓库）— 已在 [[LLM Wiki]] §8 与 [[TAB 大仓 Harness 工程化实战]] 双向印证，是否独立建页待观察
+- Agent UI / Agentic UI 设计 — 炼丹上岸单源系统方法论（八类对象/Message Part/五层前端架构），已建 [[从 Chat UI 到 Agent UI]] source 页；概念页待第二源触发
+- 设计树 / frontier / round — grilling 批量访谈三机制（已覆盖于 [[Matt Skills v1.2 grilling 重构]] 与 [[batch-grill-me 批量访谈]]）
+- 深模块 / 浅模块 / 删除测试 — improve-codebase-architecture 体检词汇（1 源，已覆盖于 [[improve-codebase-architecture 代码库体检]] 与 [[Matt Pocock 三个 skill 结构词汇]]）
 
 **实体**（被提及但非专段讨论）：
 - Codex / Cursor / OpenCode — 其他可用 LLM agent

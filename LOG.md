@@ -175,3 +175,29 @@
 ## [2026-08-25] query | 「为什么配置 MCP 而非直接给 agent 数据库凭证」综合 → 沉淀 [[MCP 与直连凭证对比]]
 
 用户读 [[Harness Engineering 团队落地规范]] §5.1 时提问：有数据库地址/用户名/密码，agent 走 Bash+CLI 就能访问，为何还要 MCP？综合作答并沉淀 synthesis：MCP 解决的不是「能不能访问」而是「受控访问」——①权限结构性收窄（工具面无写操作 + readonly_user，呼应 TAB「能判定的就别留在 Rule 里」）；②凭证不进模型上下文（${DB_PASSWORD} 只在 server 进程 env，对照源内「外部模型外传上下文」警告）；③工具面即文档 + 结构化输出省 token；④团队远程部署统一复用。何时不用：个人本地/一次性查询（源 §5.1.1 自认）。confidence: medium（凭证暴露面等部分为通用工程常识，非源内直接论述，页内已标注推论）。
+
+## [2026-09-09] ingest | 批量 14 源：老谭教学系列 12 篇 + DeepSeek Harness 拆解 + Agent UI
+
+上次处理（08-26）以来新增 14 篇，分两组：
+
+**A 组：2 篇技术深拆（新作者）**
+- [[DeepSeek Harness 源码拆解]] — 翟星人的实验室，2026-08-14：DSH 是 MIT 开源的开发者级 Agent 运行时底座（Everything is a plugin，[[Cordis]] 装配）；Service/Event/Effect/Scope 四概念、Profile/Bundle/Patch/Preset 四层装配、Session Event Log（事实流+多投影，反对 messages 当数据库）、子 Agent Spawn/Fork/composeFrom、自修改 cordis_define；横评 Codex/Claude Code/Pi/LangChain（向上封装 vs 向下拆开）+ 五个缺口（Benchmark 缺口与腾讯基线反作弊互证）。新建实体 [[DeepSeek Harness]]、[[Cordis]]、[[翟星人的实验室]]。
+- [[从 Chat UI 到 Agent UI]] — 炼丹上岸，2026-08-30：Agent UI 设计对象从 Message 扩展为八类对象；Message Part 七种 part、Run 状态机（取消订阅≠取消执行）、HITL 真暂停、Artifact 工作区、Snapshot+Event Log+Live Stream、统一事件 Reducer + AG-UI、受控 Generative UI；五层前端架构 + 四阶段演进。新建实体 [[炼丹上岸]]。
+
+**B 组：12 篇超级奶爸老谭 mattpocock 教学系列（08-03～08-18）**
+- 主系列 7 篇（01 入门 → 02 设计灵魂 → 03 词典 → 04 访谈 → 05 流水线 → 06 反馈 → 07 组装）+ 专题 5 篇（wayfinder/loop-me/batch-grill-me/teach/improve-codebase-architecture），EShop 案例贯穿，每篇「开场故事 → 机制拆解 → 何时不要用 → 回顾」。新建实体 [[超级奶爸老谭]]。
+- wiki 首个深度源补齐 4 个 skill：loop-me（in-progress 草稿，workflow spec + Push right）、teach（正式技能，七件套工作区 + 合意困难）、improve-codebase-architecture（只读体检三步 + 深浅模块/删除测试）、batch-grill-me（并入 v1.2 grilling 前快照）。
+- **矛盾标注（系统性）**：老谭 12 篇全部是 v1.1 时代快照——无一提及 v1.2（wizard/wait-what/round-by-round 均无），且把 grill-me 当 coding 访谈主入口、未反映「grill-with-docs 取代 grill-me」官方演进；batch-grill-me 描述的机制与 v1.2 round-based frontier（PR #593）几乎同构，判定为并入前草稿快照。已在 [[mattpocock skills]]、[[grill-me 实战指南]]、[[还在用 grill-with-docs]]、[[diagnosing-bugs 与 tdd]]、[[Matt Skills v1.2 grilling 重构]]、[[Matt Pocock skills Wayfinder 官方文档]] 六个页面加注记，不推翻既有 v1.2 结论。
+
+**跨源沉淀**：
+- 新建概念 [[Session Event Log]]（双源达标）：DSH 后端「事实流+多投影」与 Agent UI 前端「Snapshot+Event Log+Live Stream」三组同构映射（含 presentCall↔Tool Renderer、Approval 链↔审批卡片）。
+- 更新 [[Harness Engineering]]（第 9 源）：新增「开源运行时底座（DeepSeek Harness）」小节；定义谱系外补充框架级实现样本。
+- 更新 [[mattpocock skills]] 概念页（第 24 源后）：新增「委托/教学/体检/批量访谈类」节；矛盾区加老谭系列错位注记。
+- 更新 [[Matt Pocock]] 时间线（v1.2 + 中文教学化传播）、[[mattpocock skills 推荐工作流速查]]（扩展场景四类活）。
+
+**INDEX**：实体 +5（超级奶爸老谭/翟星人的实验室/炼丹上岸/DeepSeek Harness/Cordis）、概念 +1（[[Session Event Log]]）、源 +14（新开「老谭教学系列」组与「Agent 运行时与 UI」组）；pending 补 Agent UI 设计（单源待第二源）、设计树/frontier/round、深浅模块/删除测试。
+- 待观察：老谭系列宣称「主系列第 8 课」存在但本 wiki 未收录；翟星人预告 Cordis 下篇专题。
+
+## [2026-09-09] update | 老谭系列口径修正：主系列为 01-07 共 7 课，系列 12 篇全部收录
+
+用户确认：老谭系列实际发布口径为主系列 01-07（7 课）+ 专题 5 篇 = 12 篇，已全部收录，无「第 8 课」。修正上一条 ingest 条目中「待观察：第 8 课未收录」的说法——loop-me/batch-grill-me/teach 三篇文内自称「主系列 8 课」系作者笔误或未兑现计划，按 7 课计。已同步修正 [[超级奶爸老谭]]、[[mattpocock skills 八环节组装]]、[[loop-me 循环委托自动化]]、[[improve-codebase-architecture 代码库体检]]、INDEX 五处的口径注。另：用户新收文件「…一次探一步 1.md」经 diff 确认为 wayfinder 专题的重复收藏（仅 scene 参数与一张图片 watermark 差异），raw/ 只读未动，已建议用户删除重复件。

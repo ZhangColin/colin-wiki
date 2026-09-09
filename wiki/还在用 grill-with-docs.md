@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s?__biz=Mzg4MzcyOTQ2NQ==&mid=2247491472&id
 author: "[[运维有术]]"
 date_published: "2026-07-21"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-09
 status: active
 aliases: [grill-with-docs, /grill-with-docs, domain-modeling, /domain-modeling]
 ---
@@ -46,7 +46,8 @@ aliases: [grill-with-docs, /grill-with-docs, domain-modeling, /domain-modeling]
 
 - **演进/取代关系（核心）**：本文是 `/grill-me` → `/grill-with-docs` 取代关系的"取代方"侧。Matt 在 AI Hero 官方页公开声明 coding 不再用 `/grill-me`，改推 `/grill-with-docs`。与 [[grill-me 实战指南]] 的态度信号互证。
 - 轻度张力：作者把"4 反模式按强度排序、连续案例"标注为"我整理/延伸"，非仓库原文——引用时需注明是二手启发式。
+- **与老谭教学系列的推荐序分歧（2026-09-09 注记）**：[[CONTEXT.md 领域词典]]（[[超级奶爸老谭]]）把 grill-with-docs 建词典定位为「选择三（最重），锦上添花不是必需品」，推荐新手手写初稿——与本页记录的「Matt 本人推荐 grill-with-docs 为 coding 默认入口」方向相反。属教学推荐序与官方演进的分歧，标注并存；另注意该文 CONTEXT.md 模板（含模块地图/编码约定）比官方「纯术语表」口径宽。
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[grill-me 实战指南]] · [[Matt Pocock skills Handoff 官方文档]] · [[mattpocock skills 推荐工作流速查]]
+- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[grill-me 实战指南]] · [[Matt Pocock skills Handoff 官方文档]] · [[mattpocock skills 推荐工作流速查]] · [[CONTEXT.md 领域词典]] · [[grill 家族与需求冰山]]

@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s?__biz=Mzg4MzcyOTQ2NQ==&mid=2247491460&id
 author: "[[运维有术]]"
 date_published: "2026-07-20"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-09
 status: active
 aliases: [grill-me, /grill-me, grilling, /grilling]
 ---
@@ -20,6 +20,8 @@ aliases: [grill-me, /grill-me, grilling, /grilling]
 > 一句话要点：拆解 [[mattpocock skills]] 里 `/grill-me`（用户入口 wrapper）与 `/grilling`（12 行硬规则访谈原语）的分层关系、五条防跑偏规则，并强调 Matt 本人已公开声明**不再推荐 `/grill-me` 作为 coding 入口**。
 
 > 🔖 **v1.2 升级注记**（2026-08-17）：本文记录的是 v1.1 行为。v1.2（2026-08-05，PR #593）把 grilling 从"一次一问"重构为 **round-by-round frontier 推进**——一轮问完整个 frontier、每题带推荐答案，13 问约 3 轮问完；round-based 是官方标注的争议设计，可加一行配置 opt-out 回一次一问。本文"一次一问 + 每问带推荐答案"等规则仍适用，但默认推进节奏已变。详见 [[Matt Skills v1.2 grilling 重构]]。
+
+> 🔖 **教学系列注记**（2026-09-09）：[[超级奶爸老谭]] 系列（[[grill 家族与需求冰山]] 等）把 grill-me 写成 coding 需求对齐的默认轻量入口（"要效率用 me，要记录用 with-docs"），未记录本页的取代关系——属教学系列滞后于官方口径（Matt 已停用 grill-me 做 coding），引用时按 v1.1 快照理解，不推翻取代结论。
 
 ## 关键要点
 
@@ -48,4 +50,4 @@ aliases: [grill-me, /grill-me, grilling, /grilling]
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[还在用 grill-with-docs]] · [[Matt Skills v1.2 grilling 重构]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[mattpocock skills 推荐工作流速查]] · [[2026 年再看 Superpowers：grill-me 场景选型]]
+- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[还在用 grill-with-docs]] · [[Matt Skills v1.2 grilling 重构]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[mattpocock skills 推荐工作流速查]] · [[2026 年再看 Superpowers：grill-me 场景选型]] · [[grill 家族与需求冰山]] · [[超级奶爸老谭]]

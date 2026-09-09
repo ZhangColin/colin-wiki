@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s?__biz=Mzg4MzcyOTQ2NQ==&mid=2247491659&id
 author: "[[运维有术]]"
 date_published: "2026-08-11"
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-09-09
 status: active
 aliases: [grilling v1.2, round-by-round frontier, 13 问 3 轮]
 ---
@@ -51,7 +51,8 @@ aliases: [grilling v1.2, round-by-round frontier, 13 问 3 轮]
 - **grilling 行为代际变更**：[[grill-me 实战指南]] 与 [[还在用 grill-with-docs]] 记录的"一次一问"是 v1.1 行为，v1.2 默认已变 round-based（可 opt-out 回退）——演进非矛盾，概念页已标。
 - 与 [[mattpocock skills]] 概念页记录的 grilling 五规则一致，本文补"一轮问 frontier"的推进机制。
 - star 口径：212.2K（08-10 检索）vs 213.4K（[[Matt Pocock Skills v1.2 更新全景]] 08-14 写作）——正常增长。
+- **batch-grill-me 同物印证（2026-09-09 注记）**：[[batch-grill-me 批量访谈]]（[[超级奶爸老谭]]，08-14 发布，晚于 v1.2 一周）仍把 grilling 描述为「一次一问」、把 batch-grill-me 当独立草稿技能——其描述的机制（设计树/frontier/round/编号+推荐答案/前沿空+确认门控）与本页记录的 v1.2 round-based frontier **几乎同构**。判断：该文是 batch-grill-me 并入 grilling 本体前的草稿快照（或作者未同步 v1.2），可作为本重构的教学化补充；其「5 个内 grill-me、超 10 个 batch」选型标尺与官方 opt-out 设计互补但未提及。
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock Skills v1.2 更新全景]] · [[grill-me 实战指南]] · [[还在用 grill-with-docs]] · [[Superpowers 与 mattpocock skills 路线对照]] · [[Superpowers]] · [[Matt Pocock]] · [[运维有术]]
+- [[mattpocock skills]] · [[Matt Pocock Skills v1.2 更新全景]] · [[grill-me 实战指南]] · [[还在用 grill-with-docs]] · [[Superpowers 与 mattpocock skills 路线对照]] · [[Superpowers]] · [[Matt Pocock]] · [[运维有术]] · [[batch-grill-me 批量访谈]] · [[超级奶爸老谭]]
