@@ -254,3 +254,13 @@
 - INDEX：系列组标题改"已完结 24+1 篇" + 8 行；synthesis 组 +1；Pending 待收录条目清零注记；"验证即证据"观察项源数更新至 6+。
 - 过程注记：一次 INDEX 编辑失误（"验证即证据"行首被误并入上一行），当场发现并修复，未留残余。
 - 待办：总结篇 defuddle 补抓核对速查表原文。
+## [2026-10-28] ingest | 4 源批量：DeltaBox Lite / Jev / 老谭 v1.3 拆解两篇（retro + implement-spec）
+
+- [[DeltaBox Lite 终端文件沙箱]] — IPADS 开源终端 Agent 事务文件沙箱：CB-CoW（Copy-Down）把 O(1) 留给大概率发生的提交（Copy-Up 则撤销 O(1) 提交昂贵）；EXEC→DIFF→COMMIT/ABORT 状态机 + 三级回滚点；DSH 插件审批控制台（Allow Once/Reject）+ Pi 扩展。**新实体**：[[IPADS]]、[[DeltaBox Lite]]。
+- [[Jev 判断模型入门]] — 老丁888（转写 Codevolution）：TypeSafe system one 判断模型「聪明的 if 语句」——不聊天只判断，三类问题（Noul 是非概率/choice 必选/score 刻度加权），114ms / 约 1/170 成本（输出不计费）；「模型变窄，反而更好用」。**新实体**：[[Jev]]；[[Agent 测评 Eval]] 加 LLM-as-Judge 高频内嵌基础设施注记（confidence≠准确率，仍需校准）。
+- [[Matt Pocock retro 拆解]] — 老谭「共渡时艰·拆解」栏目首发（源码级，commit 49dd158）：45 行复盘技能，**改环境不改代码**；编码规范由评审 agent 负责（上下文干净）而非实现 agent；**机械违规默认造检查（linter/CI），判断题才配写规范**（"检查会失败，一句话挡不住"）——与 Superpowers writing-skills"写规矩"正面张力，已注记 [[writing-skills 跨路线对照]]；对 colin-wiki 自身的 CLAUDE.md schema 直接自反。
+- [[Matt Pocock implement-spec 拆解]] — 整份 spec 一次跑完：任务图（票带阻塞边）/前沿（最大并发）/集成分支（合并皆快进）/上下文指针，终点一次 code-review；FAQ 六坑全来自真实报告；与 [[子代理驱动开发]] 黄金对照（**审查密度换并发吞吐**，新增"外部印证 3"）。
+- **版本口径更新**：mattpocock/skills **v1.3.0（2026-10-04，PR #1120）**——retro / implement-spec / pr 毕业进 Engineering 桶，主链延长至 retro，星标 290K（10-14 API 查证）；已更新 [[mattpocock skills]] 演进区块与增长曲线。
+- 更新 6 页：[[mattpocock skills]]（v1.3 区块）、[[超级奶爸老谭]]（新栏目「共渡时艰·拆解」+时间线）、[[老丁888]]（第二源）、[[子代理驱动开发]]、[[Agent 测评 Eval]]、[[writing-skills 跨路线对照]]（retro 造检查张力）。
+- INDEX：实体 +3（IPADS / DeltaBox Lite / Jev）、源 +4（新小节「v1.3 拆解」+「判断模型与终端 Agent 沙箱」）、Pending +4 观察项。
+- 待观察：老谭拆解栏目后续篇目（pr 拆解）、DeltaBox 完整版（非 Lite）、Jev 脱离 Early Access 后定价口径。

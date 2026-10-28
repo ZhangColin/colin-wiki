@@ -7,8 +7,9 @@ sources:
   - "[[Matt Pocock writing-great-skills 八词诊断]]"
   - "[[Superpowers writing-skills 规矩固化成技能]]"
   - "[[Skills 设计方法论]]"
+  - "[[Matt Pocock retro 拆解]]"
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-28
 status: active
 confidence: medium
 aliases: [写 skill 的跨路线共识, writing-great-skills vs writing-skills]
@@ -41,6 +42,8 @@ aliases: [写 skill 的跨路线共识, writing-great-skills vs writing-skills]
 ## 结论
 
 跨路线共识四条可直接当 SKILL.md 写作检查单用：①description 写成「何时触发」而非「这是什么」；②每条规矩过 no-op 测试（删掉行为变没变 / 没有它 AI 会做错吗）；③把踩过的坑写成区块；④写完让 AI 实际用一次验证。分歧是适用姿态：改存量用 mattpocock 的手术清单，固增量用 Superpowers 的固化流程——**对 colin-wiki 自身的启示**：CLAUDE.md/AGENTS.md 这类「规矩文件」同样适用四条检查单（如「全部用中文输出」过 no-op 测试，「改一处必同步另一处」是 gotcha 式条款）。
+
+**v1.3 新证据（2026-10 补）**：mattpocock `retro` 把分水岭再推一格——**机械违规默认造检查（linter/CI），判断题才配写进规范文件**（「检查会失败，一句话挡不住」），且编码规范应由评审 agent（上下文干净）而非实现 agent（上下文拥堵）负责、新规则不进 AGENTS.md。这与 Superpowers writing-skills「把规矩写进 SKILL.md」形成正面张力，但会合点仍是 no-op 测试：**能用会失败的机制挡住的，不写成一句 prose**。见 [[Matt Pocock retro 拆解]]。
 
 ## 引用
 

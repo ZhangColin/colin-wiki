@@ -9,8 +9,9 @@ sources:
   - "[[Anthropic 与 Perplexity 的 Skills 设计方法论]]"
   - "[[Cole Medin 黑灯工厂实验]]"
   - "[[TAB 大仓 Harness 工程化实战]]"
+  - "[[Jev 判断模型入门]]"
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-10-28
 status: active
 aliases:
   - Agent Eval
@@ -32,6 +33,8 @@ Agent 的**非确定性**（同 prompt 多次结果不同）、**黑盒化**（�
 ### 三类评分器（谁来评）
 
 **确定性评分器（脚本/断言/AST）> Rubric 评分器（LLM-as-Judge + Prompt + Schema）> 人工评分器（专家）**——能用代码判断的绝不用模型；人工主要做**校准**（与 LLM 评委对齐，一致率 ≥85% 才可用）、诊断异常（0%/100% 通过率通常是评分器坏了）、Ground Truth、高风险兜底。专家时间 60%+ 应花在校准与诊断。
+
+**判断模型专门化（2026-10 注记）**：[[Jev]]（TypeSafe）把「判断」做成独立 system one 模型——毫秒级、约 1/170 成本、输出不计费，是 Rubric 评分器**高频内嵌**的基础设施候选（判断便宜到可忽略 → Jevons 悖论式扩容到以前算不过账的场景）；但「置信度不是准确率的保证」，作 judge 仍需人工校准（一致率门槛不因便宜而豁免）。见 [[Jev 判断模型入门]]。
 
 ### 评什么：五维度 + 四层映射
 
@@ -81,4 +84,4 @@ Agent 的**非确定性**（同 prompt 多次结果不同）、**黑盒化**（�
 
 ## 相关页面
 
-- [[腾讯 Agent 与 Skill 测评方案]] · [[Skills 设计方法论]] · [[Anthropic 与 Perplexity 的 Skills 设计方法论]] · [[Cole Medin 黑灯工厂实验]] · [[TAB 大仓 Harness 工程化实战]] · [[Harness Engineering]] · [[腾讯程序员]] · [[Cole Medin]] · [[Superpowers]] · [[LLM Wiki]]
+- [[腾讯 Agent 与 Skill 测评方案]] · [[Skills 设计方法论]] · [[Anthropic 与 Perplexity 的 Skills 设计方法论]] · [[Cole Medin 黑灯工厂实验]] · [[TAB 大仓 Harness 工程化实战]] · [[Harness Engineering]] · [[腾讯程序员]] · [[Cole Medin]] · [[Superpowers]] · [[LLM Wiki]] · [[Jev 判断模型入门]] · [[Jev]]

@@ -41,8 +41,10 @@ sources:
   - "[[batch-grill-me 批量访谈]]"
   - "[[teach 跨会话教学]]"
   - "[[improve-codebase-architecture 代码库体检]]"
+  - "[[Matt Pocock retro 拆解]]"
+  - "[[Matt Pocock implement-spec 拆解]]"
 created: 2026-07-26
-updated: 2026-09-09
+updated: 2026-10-28
 status: active
 aliases:
   - mattpocock/skills
@@ -153,6 +155,10 @@ v1.2 的主线是 **4 处人机分工边界的位移 + grilling 重构 + 双平�
 
 → grilling 重构机制与社区定位（"grill-me is the pressure-test primitive; Superpowers is the default engineering OS"）见 [[Matt Skills v1.2 grilling 重构]]；wizard 深拆见 [[Matt Pocock wizard 人墙自动化]]；会话边界管理（Continue/clear/handoff/subagent/compact 五问决策树）见 [[Matt Pocock 会话边界五问决策树]]。
 
+## ⚠️ v1.3 演进（2026-10-04 发布，PR #1120）
+
+一批三个技能从 in-progress 毕业进 **Engineering 桶**：**retro**（会话后复盘：改环境不改代码，机械违规默认造检查而非写规范，编码规范由评审 agent 负责）、**implement-spec**（整份 spec 一次跑完：任务图 + 前沿 + 集成分支 + 终点一次 code-review，是 /implement 的并行替代版——调度权从人交给编排会话）、**pr**；当前最新 v1.3.1。主链延长为 `grill-with-docs → to-spec → to-tickets → implement → code-review → retro`。retro 的「造检查 vs 写规则」与 [[writing-skills 跨路线对照]] 的共识谱系衔接。源码级拆解见 [[Matt Pocock retro 拆解]] 与 [[Matt Pocock implement-spec 拆解]]（老谭「共渡时艰·拆解」栏目，2026-10，本地克隆 commit 49dd158）。
+
 ## 本地化对照：与本 vault 自用 skills 的关系
 
 本 wiki（colin-wiki）自己运行的 **superpowers / pm-execution** skills 与 mattpocock skills 是同一类东西——都是给 LLM agent 加工程纪律的 skill 集，且都通过 SKILL.md + user/model-invoked 机制工作。侧重不同：
@@ -174,7 +180,7 @@ v1.2 的主线是 **4 处人机分工边界的位移 + grilling 重构 + 双平�
 
 ## ⚠️ 矛盾 / 未解问题
 
-- **仓库 stars 数据各源不一致**：视频录制时 162K、YouTube 描述 170K；7 月各源 150K-170K；[[Matt Skills v1.2 grilling 重构]] 记 **212.2K**（2026-08-10 检索，全站第 19 名，skills.sh 13.5M 下载）；[[Matt Pocock Skills v1.2 更新全景]] 记 **213.4K**（2026-08-14）。属时间点正常增长，非矛盾——本页取**最新 212K+**（2026-08）。增长曲线：5 月 77K → 7 月 170K → 8 月 212K。
+- **仓库 stars 数据各源不一致**：视频录制时 162K、YouTube 描述 170K；7 月各源 150K-170K；[[Matt Skills v1.2 grilling 重构]] 记 **212.2K**（2026-08-10 检索，全站第 19 名，skills.sh 13.5M 下载）；[[Matt Pocock Skills v1.2 更新全景]] 记 **213.4K**（2026-08-14）。属时间点正常增长，非矛盾——本页取**最新 212K+**（2026-08）。增长曲线：5 月 77K → 7 月 170K → 8 月 212K → 10 月 290K（290612，GitHub API 2026-10-14 查证，[[Matt Pocock implement-spec 拆解]]）。
 - **skill 数量口径随版本演进（重要）**：v1.1.0 源码核对为 **18 个**（12 user-invoked + 6 model-invoked，"21 是早期流传数"）；v1.2 plugin 显式列出 **24 个 promoted skill**——引用 skill 数必须带版本号。
 - **smart zone 阈值未收敛**：ask-matt ~120k / dictionary 125-150k / YouTube ~140k 三处不一，已沉淀到 [[smart zone]] 概念页统一标注为"约 120k–150k（有争议）"。
 - **/grill-me 已被作者公开取代**：coding 场景 Matt 改推 `/grill-with-docs`/`domain-model`，新链路 `/grill-with-docs → /to-prd → /to-issues → tdd`。引用 `/grill-me` 时须标注此演进（详见 [[grill-me 实战指南]]、[[还在用 grill-with-docs]]）。
@@ -184,7 +190,7 @@ v1.2 的主线是 **4 处人机分工边界的位移 + grilling 重构 + 双平�
 
 ## 相关页面
 
-- **来源**：[[Matt Pocock 完整工作流视频]] · [[mattpocock skills 标准工作流]] · [[MattPocock Skills v1.1 重磅更新]] · [[mattpocock skills 秒杀系统实战]] · [[Matt Pocock skills v1.1 官方更新日志]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock skills Handoff 官方文档]] · [[MattPocock Skills 21 个 skill 工程纪律体系]] · [[Matt Pocock main flow 五环节]] · [[Matt Pocock 6 个 skill 工程师本能]] · [[Matt Pocock 三个 skill 结构词汇]] · [[Matt Pocock writing-great-skills 八词诊断]] · [[Matt Pocock setup-matt-pocock-skills 配置落地]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock 三条 on-ramp 分流]] · [[Matt Pocock 后台 research 与主线程并行]] · [[Matt Pocock Prototype 保真度方法论]] · [[grill-me 实战指南]] · [[还在用 grill-with-docs]] · [[diagnosing-bugs 与 tdd]] · [[Matt Pocock 的 Git 护栏]] · [[Matt Pocock 工作流五步主线鸟瞰]] · [[Matt Pocock Skills v1.2 更新全景]] · [[Matt Skills v1.2 grilling 重构]] · [[Matt Pocock wizard 人墙自动化]] · [[Matt Pocock 会话边界五问决策树]] · [[mattpocock skills 完全入门指南]] · [[mattpocock skills 设计灵魂]] · [[CONTEXT.md 领域词典]] · [[grill 家族与需求冰山]] · [[to-spec 流水线对话变代码]] · [[tdd 与 diagnosing-bugs 反馈回路]] · [[mattpocock skills 八环节组装]] · [[wayfinder 迷雾地图实战]] · [[loop-me 循环委托自动化]] · [[batch-grill-me 批量访谈]] · [[teach 跨会话教学]] · [[improve-codebase-architecture 代码库体检]]
+- **来源**：[[Matt Pocock 完整工作流视频]] · [[mattpocock skills 标准工作流]] · [[MattPocock Skills v1.1 重磅更新]] · [[mattpocock skills 秒杀系统实战]] · [[Matt Pocock skills v1.1 官方更新日志]] · [[Matt Pocock skills Wayfinder 官方文档]] · [[Matt Pocock skills Handoff 官方文档]] · [[MattPocock Skills 21 个 skill 工程纪律体系]] · [[Matt Pocock main flow 五环节]] · [[Matt Pocock 6 个 skill 工程师本能]] · [[Matt Pocock 三个 skill 结构词汇]] · [[Matt Pocock writing-great-skills 八词诊断]] · [[Matt Pocock setup-matt-pocock-skills 配置落地]] · [[Matt Pocock wayfinder handoff 接力协议]] · [[Matt Pocock 三条 on-ramp 分流]] · [[Matt Pocock 后台 research 与主线程并行]] · [[Matt Pocock Prototype 保真度方法论]] · [[grill-me 实战指南]] · [[还在用 grill-with-docs]] · [[diagnosing-bugs 与 tdd]] · [[Matt Pocock 的 Git 护栏]] · [[Matt Pocock 工作流五步主线鸟瞰]] · [[Matt Pocock Skills v1.2 更新全景]] · [[Matt Skills v1.2 grilling 重构]] · [[Matt Pocock wizard 人墙自动化]] · [[Matt Pocock 会话边界五问决策树]] · [[mattpocock skills 完全入门指南]] · [[mattpocock skills 设计灵魂]] · [[CONTEXT.md 领域词典]] · [[grill 家族与需求冰山]] · [[to-spec 流水线对话变代码]] · [[tdd 与 diagnosing-bugs 反馈回路]] · [[mattpocock skills 八环节组装]] · [[wayfinder 迷雾地图实战]] · [[loop-me 循环委托自动化]] · [[batch-grill-me 批量访谈]] · [[teach 跨会话教学]] · [[improve-codebase-architecture 代码库体检]] · [[Matt Pocock retro 拆解]] · [[Matt Pocock implement-spec 拆解]]
 - **综合**：[[mattpocock skills 推荐工作流速查]] — 按场景选流程的速查页（新手入口）
 - **子概念**：[[smart zone]] · [[HITL 与 AFK]] · [[Skills 设计方法论]]
 - **实体**：[[Matt Pocock]] · [[小匠Skills]] · [[运维有术]] · [[鸟窝]] · [[超级奶爸老谭]]

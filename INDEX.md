@@ -35,6 +35,9 @@
 - [[炼丹上岸]] — 公众号，Agent UI 设计方法论（Chat UI → Agent UI 八类对象/Message Part/Run 状态机）
 - [[DeepSeek Harness]] — DeepSeek 开源 Agent 运行时底座（MIT，Everything is a plugin，Cordis 装配）
 - [[Cordis]] — 开源插件运行时，DeepSeek Harness 的底座（Service/Event/Effect/Scope）
+- [[IPADS]] — 上海交大并行与分布式系统研究所，DeltaBox 沙箱出品方
+- [[DeltaBox Lite]] — 终端 AI Agent 事务文件沙箱（CB-CoW Copy-Down），IPADS 开源
+- [[Jev]] — TypeSafe 判断模型（system one，「聪明的 if 语句」，不聊天只判断）
 
 ## 概念 (concept)
 
@@ -89,6 +92,10 @@
 - [[Matt Pocock wizard 人墙自动化]] — 人墙步骤→交互式 bash 向导（agent 只写不跑）· 2026-08-12
 - [[Matt Pocock 会话边界五问决策树]] — PHASE-BOUNDARIES：Continue/clear/handoff/subagent/compact，compact 垫底 · 2026-08-13
 - [[Matt Pocock Skills v1.2 更新全景]] — 4 处人机边界位移 + 双平台三态 + 24 promoted skills · 2026-08-14
+
+### mattpocock skills — v1.3 拆解（2026-10，老谭「共渡时艰·拆解」栏目）
+- [[Matt Pocock retro 拆解]] — 45 行复盘技能：改环境不改代码，机械违规默认造检查 · 2026-10-14
+- [[Matt Pocock implement-spec 拆解]] — 整份 spec 一次跑完：任务图+前沿+集成分支，终点一次评审 · 2026-10-15
 
 ### mattpocock skills — 老谭教学系列（2026-08，v1.1 口径快照）
 - [[mattpocock skills 完全入门指南]] — 01 开关：四坑→解药骨架 + 两种安装 + 边界清单 · 2026-08-03
@@ -160,6 +167,10 @@
 ### Agent 运行时与 UI（新领域）
 - [[从 Chat UI 到 Agent UI]] — 炼丹上岸：八类设计对象 + Message Part + Run 状态机 + Snapshot/EventLog 恢复 · 2026-08-30
 
+### 判断模型与终端 Agent 沙箱（新领域）
+- [[DeltaBox Lite 终端文件沙箱]] — IPADS：CB-CoW Copy-Down 事务沙箱，Diff/Commit/Abort + 审批，DSH 插件 · 2026-10-16
+- [[Jev 判断模型入门]] — 老丁888 转写：TypeSafe 判断模型 state+三类问题，114ms / 约 1/170 成本 · 2026-09-21
+
 ### 个人 AI 工作流（产品管理）
 - [[产品经理的 AI 工作流]] — SinKris：8 个工作流（工具+Prompt+SOP）+ 80/20 分工公式 · 2026-08-03
 
@@ -217,9 +228,13 @@
 - 设计树 / frontier / round — grilling 批量访谈三机制（已覆盖于 [[Matt Skills v1.2 grilling 重构]] 与 [[batch-grill-me 批量访谈]]）
 - 深模块 / 浅模块 / 删除测试 — improve-codebase-architecture 体检词汇（1 源，已覆盖于 [[improve-codebase-architecture 代码库体检]] 与 [[Matt Pocock 三个 skill 结构词汇]]）
 - 验证即证据（verification as evidence）— "完成=验证过+有证据"纪律：TDD 红绿 / finishing 合完再测 / v6.0 reviewer 不信报告 / verification 三问 / receiving 改完给证据 / 结语"把运气变流程"（6+ 源），已覆盖于各 source 页，待独立概念页
+- 判断模型（system one / LLM-judge 专门化）— Jev 单源（已覆盖于 [[Jev 判断模型入门]] 与 [[Agent 测评 Eval]] 注记），与 LLM-as-Judge 谱系，待第二源触发
+- Agent 沙箱 / 事务文件系统 — DeltaBox Lite 单源（已覆盖于 [[DeltaBox Lite 终端文件沙箱]]），与 git worktrees / 审批护栏的装置谱系，待第二源触发
+- 任务图 / frontier（implement-spec 义：可并行任务集）— 单源（[[Matt Pocock implement-spec 拆解]]）；注意与 grilling 的 round-by-round frontier 同词不同义，引用须带语境
 - Superpowers 待收录技能篇目：（已清零——老谭幸福账本系列 2026-09-23 完结，25 源全收录）
 
 **实体**（被提及但非专段讨论）：
+- TypeSafe — Jev 发行方（AI 公司，1 源，已覆盖于 [[Jev]]）；注意与 [[Matt Pocock]] 的 Total TypeScript 无关，勿混淆
 - Codex / Cursor / OpenCode — 其他可用 LLM agent
 - NotebookLM — RAG 代表，作为对照提及
 - qmd — 本地 markdown 搜索引擎（规模大时引入）
