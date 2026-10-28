@@ -9,8 +9,9 @@ sources:
   - "[[Anthropic 与 Perplexity 的 Skills 设计方法论]]"
   - "[[Superpowers]]"
   - "[[mattpocock skills]]"
+  - "[[Superpowers brainstorming 需求访谈]]"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-10
 status: active
 confidence: high
 aliases:
@@ -49,6 +50,7 @@ aliases:
 3. **可共存**：mattpocock 大部分命令不参与自动触发，superpowers 的 hook 只强推自己那 14 个，互不抢匹配（[[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]]）。本 vault 自身就在用 superpowers，同时把 mattpocock skills 作为对照系研究。
 4. **选型启发**：追求工程规范、团队可审计、多平台 → 偏 Superpowers；追求轻量灵活、单命令可组合、context 经济 → 偏 mattpocock。
 5. **社区定位印证（2026-08 新增，v1.2 后）**：第三方深度对比（ryanuo.cc，经 [[Matt Skills v1.2 grilling 重构]] 转述）给出精准定位——**"grill-me is the pressure-test primitive; Superpowers is the default engineering OS"**（grill-me 是压测原语，Superpowers 是默认工程操作系统）；AI Coding Daily 称 grill-me "一直是 planning 领域的标准"。**社区共识是可组合而非互斥**：先用 grill-me 对齐，再用 Superpowers 的 plan/TDD/worktree 跑全流程，各取所长——与本页结论 3 一致。
+6. **访谈节奏分化（2026-09 新增）**：两条路线在"需求访谈怎么问"上正式分道扬镳——mattpocock 侧 v1.2 把 grilling 重构为 round-by-round frontier（一轮批量问、答完解锁下一批，13 问约 3 轮，[[Matt Skills v1.2 grilling 重构]]），Superpowers brainstorming 仍坚持一次一问苏格拉底式逐问收敛（[[Superpowers brainstorming 需求访谈]]）。一边砍对齐轮次省时间，一边保持每答必深思。另：[[超级奶爸老谭]] 先后系统教学两条路线（mattpocock 12 篇 → Superpowers 幸福账本系列 15+ 篇连载中），作者级印证两路线面向不同读者、可共存。
 
 ## 引用
 
@@ -56,6 +58,7 @@ aliases:
 - [[2026 年再看 Superpowers：grill-me 场景选型]] — grill-me vs brainstorming 按目标产物选工具
 - [[Anthropic 与 Perplexity 的 Skills 设计方法论]] — 两者共同的方法论根基（上下文工程）
 - [[Matt Skills v1.2 grilling 重构]] — v1.2 后的社区定位与"可组合"共识
+- [[Superpowers brainstorming 需求访谈]] — brainstorming 一次一问机制实录（访谈节奏分化证据）
 - [[Superpowers]] · [[mattpocock skills]] — 两概念页
 
 ## 相关页面

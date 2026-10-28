@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s?__biz=Mzg4MzcyOTQ2NQ==&mid=2247491419&id
 author: "[[运维有术]]"
 date_published: "2026-07-16"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-10
 status: active
 aliases: [grill-me vs Superpowers brainstorming, Superpowers 与 grill-me 场景选型]
 ---
@@ -49,4 +49,4 @@ aliases: [grill-me vs Superpowers brainstorming, Superpowers 与 grill-me 场景
 
 ## 相关页面
 
-- [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] · [[mattpocock skills]] · [[mattpocock skills 推荐工作流速查]] · [[运维有术]] · [[Matt Pocock]] · [[Superpowers]] · [[mattpocock skills 标准工作流]] · [[grill-me 实战指南]] · [[还在用 grill-with-docs]]
+- [[12 行 vs 689 行：mattpocock skills 与 superpowers 的路线之争]] · [[mattpocock skills]] · [[mattpocock skills 推荐工作流速查]] · [[运维有术]] · [[Matt Pocock]] · [[Superpowers]] · [[mattpocock skills 标准工作流]] · [[grill-me 实战指南]] · [[还在用 grill-with-docs]] · [[Superpowers brainstorming 需求访谈]]（brainstorming 一次一问机制教学实录，2026-09 补——注意 grilling v1.2 已转 round-by-round，两路线访谈节奏分化见 [[Superpowers 与 mattpocock skills 路线对照]]）

@@ -201,3 +201,56 @@
 ## [2026-09-09] update | 老谭系列口径修正：主系列为 01-07 共 7 课，系列 12 篇全部收录
 
 用户确认：老谭系列实际发布口径为主系列 01-07（7 课）+ 专题 5 篇 = 12 篇，已全部收录，无「第 8 课」。修正上一条 ingest 条目中「待观察：第 8 课未收录」的说法——loop-me/batch-grill-me/teach 三篇文内自称「主系列 8 课」系作者笔误或未兑现计划，按 7 课计。已同步修正 [[超级奶爸老谭]]、[[mattpocock skills 八环节组装]]、[[loop-me 循环委托自动化]]、[[improve-codebase-architecture 代码库体检]]、INDEX 五处的口径注。另：用户新收文件「…一次探一步 1.md」经 diff 确认为 wayfinder 专题的重复收藏（仅 scene 参数与一张图片 watermark 差异），raw/ 只读未动，已建议用户删除重复件。
+
+## [2026-09-10] ingest | 批量 15 源：老谭 Superpowers 教学系列（幸福账本 00–14，连载中）
+
+处理 09-09 下午至 09-10 上午新收录的 15 篇——[[超级奶爸老谭]] 第二套系列（2026-08-21 开篇、日更 08:05），用「幸福账本」家庭记账全栈项目（Java 21 + Spring Boot 3 + H2 / Vue 3 + Element Plus）逐篇教 [[Superpowers]] 技能树。**同一作者先后系统教学"路线之争"的两条路线**（mattpocock 12 篇 → Superpowers 15+ 篇），本身是两路线可共存的作者级注脚。收录 00–14，系列规划 20+ 篇仍在连载（预告 root-cause-tracing 等 7+ 篇）。
+
+**新建 15 个 source 页**：
+- 三张入场券：[[Superpowers brainstorming 需求访谈]]（苏格拉底一次一问，四轮聊成规格）、[[Superpowers writing-plans 施工图]]（粒度双向标准）、[[Superpowers executing-plans 一步一确认]]（分批+确认+回滚）
+- 测试三篇：[[Superpowers TDD 红绿循环]]（哨兵测试 novel 装置）、[[Superpowers condition-based-waiting 条件等待]]（Awaitility + 前端轮询，**wiki 首收该技能**）、[[Superpowers testing-anti-patterns 测试反模式]]（四坑）
+- 基建两篇：[[幸福账本 REST API 基建]]（record/实体分层 + X-User-Id 账本切换）、[[幸福账本 Vue 前端起步]]（前后端第一次握手）
+- 并行四篇：[[Superpowers using-git-worktrees 工作树隔离]]（"隔离靠目录不靠自觉"）、[[Superpowers finishing-a-development-branch 分支收尾]]（合/修/弃 + 主干再测）、[[Superpowers dispatching-parallel-agents 并行派发]]（契约先行）、[[Superpowers subagent-driven-development AI 项目经理]]（AI PM 流水线）
+- 调试一篇：[[Superpowers systematic-debugging 四阶段调试]]（复现→假设→验证→根因，"报表多 57 元"案例）
+- 开篇/安装：[[Superpowers 开篇 幸福账本]]、[[Superpowers 安装与技能全景]]
+
+**概念/实体更新（5 页）**：
+- [[Superpowers]]（第 9–23 源）：新增「中文教学化传播：老谭幸福账本系列」小节；⚠️ 区新增**技能数口径** 14（v5.0.7，2026-04）→ 18（2026-08 仓库：testing +2、debugging +2）——版本演进非矛盾，与 mattpocock 18→24 演进同构，引用须带时点。
+- [[超级奶爸老谭]]：第二系列登记 + 时间线（两系列仅隔 3 天无缝切换）；注意本系列为 2026-08/09 当前口径（非上一系列的 v1.1 滞后快照）。
+- [[子代理驱动开发]]（第 8 源）：新增「教学化口径」小节——老谭版两级审查 = 子代理自审 + 主会话复审，与 v5.x 两轮独立 review / v6.0 单 task-reviewer **三口径并排**（⚠️ 区同步）；"项目经理也在你的上下文里干活"与 [[smart zone]] 呼应。
+- [[Superpowers 与 mattpocock skills 路线对照]]：结论新增第 6 条「访谈节奏分化」——v1.2 grilling 转 round-by-round 批量轮次（13 问 3 轮）vs brainstorming 坚持一次一问，两条路线在访谈节奏上正式分道扬镳。
+- 小更新：[[diagnosing-bugs 与 tdd]]（补 Superpowers 4 阶段教学化展开指引，印证"不能无条件互换"）、[[2026 年再看 Superpowers：grill-me 场景选型]]（互链）。
+
+**INDEX**：新开「Superpowers — 老谭教学系列·幸福账本」源分组（15 条）；老谭实体行更新；pending 补系列待收录篇目（root-cause-tracing / verification-before-completion / defense-in-depth / requesting-code-review / receiving-code-review / writing-skills / 组合实战 2 篇）。
+
+**待观察**：① 系列日更中（14 篇发于今日 08:05），后续篇目收录时补 source 页；② 老谭版两级审查对应官方哪个版本，待 root-cause-tracing / requesting-code-review 篇收录后交叉核对；③ brainstorming 教学版未提"2-3 方案比较"环节，官方 SKILL 原文核对留待 lint。
+
+## [2026-09-11] ingest | 老谭 Superpowers 系列 15：root-cause-tracing 根因追踪
+
+- [[Superpowers root-cause-tracing 根因追踪]] — 「差一分钱」案例（报表 5793.40 vs 流水 5793.41，"账不平就是系统在说谎"）：表象（分类合计差 0.01）→ 因果链四跳（报表→接口→聚合 BigDecimal.add 没毛病→再上追一层 EntryRepository 的 `doubleValue()` 累加）→ 修根子（全程 BigDecimal）+ 双防线（MoneyRules 不变式 + 一正一反哨兵测试）。**根因判据**："修掉后能否解释之前所有相关症状"；与 systematic-debugging 分工 = **流程 vs 因果链定位**（"症状只是根因在水面的影子"）。
+- 更新 4 页：[[Superpowers]]/[[超级奶爸老谭]]（系列收录至 00–15 共 16 篇）、[[Superpowers systematic-debugging 四阶段调试]]（前后篇互链，"与 root-cause-tracing 分工待核对"事项关闭）、[[Superpowers TDD 红绿循环]]（哨兵测试跨篇复用注记）；[[diagnosing-bugs 与 tdd]] 补根因判据与 falsifiable 假设的跨路线呼应。
+- INDEX：系列组 +1，pending 移除 root-cause-tracing。
+- 注记（推论）：哨兵测试恒绿、技术上不会失败报警——"防线"价值在文档/红线宣示层面，机器可判定的防线是 MoneyRules 与类型纪律；已在 source 页 ⚠️ 区标注，勿将其理解为会红的回归测试。
+- 待观察：16 verification-before-completion 已预告（老王"AI 绕过第一道防线呢？"埋线），defense-in-depth 估计紧随其后。
+## [2026-09-15] ingest | 老谭 Superpowers 系列 16：verification-before-completion 验证再收工
+
+- [[Superpowers verification-before-completion 验证再收工]] — 改完 (implemented) ≠ 完成 (completed)：完成 = 验证过 + 有证据，证据只能是测试输出/截图/接口返回，不能是「我觉得应该没问题」。三层验证（代码层测试绿 / 行为层真实环境走一遍 / 验收对照现象非代码）+ 四步收工流程（跑前后端测试 → 浏览器真走一遍 → 验收对照 → 防回归测试钉死才提交）+ 三问清单。案例：预算标红 `null > 2000` 为 false，spent 为空按 0。**三铁律至此全部技能化展开**（①TDD 05 篇 / ②systematic-debugging 14 篇 / ③本篇）。
+- 更新 4 页：[[Superpowers]]（三铁律补篇目注记 + 系列收录至 00–16 共 17 篇）、[[超级奶爸老谭]]（系列结构调试三篇 + 时间线）、[[Superpowers root-cause-tracing 根因追踪]]（debugging 类进度更新 + 老王两问归属理顺：16/17 篇分别接住）、INDEX pending 移除本技能。
+- 同构注记：与 v6.0 reviewer "Do Not Trust the Report"（[[Superpowers 6.0 reviewer 只读重写]]）同一「不信任口头完成声明」精神在收工自检侧的投影。
+- INDEX pending 新增观察项：「验证即证据（verification as evidence）」概念页——TDD 红绿 / finishing 合完再测 / reviewer 不信报告 / 本篇三问多源出现，待巩固后独立建页。
+- 待观察：17 defense-in-depth 已预告（「防线本来就是用来一层一层叠的」），估计紧随其后。
+## [2026-10-22] ingest | 老谭 Superpowers 系列 17–23+总结篇：系列完结批量收录（8 源）
+
+- [[Superpowers defense-in-depth 纵深防御]] — 一道锁→纵深四道锁（前端表单 / @Valid / MoneyRules / 防回归测试），每层独立不赌单点；**debugging 类四技能收齐**（18 技能口径调试类全录）。
+- [[Superpowers requesting-code-review 主动求审]] — 交"能审的活"：自看 diff → 自跑测试（不绿别求审）→ 自查清单 → 自写说明，"重点想请你审哪"最高效。
+- [[Superpowers receiving-code-review 接受审查]] — 四步接意见：别辩护 → 先理解 → 逐条回应（改/讨论/不改）→ 改完给证据；"意见被好好拒绝，好过被假装接受"。MoneyRules.check 来历回填（15 篇 assertValid → 19 篇意见产物、17 篇已用，代码时间线自洽）。
+- [[Superpowers writing-skills 规矩固化成技能]] — 元技能：description 管触发 / 规矩可执行（"注意精度"是废话、"用 compareTo"是指令）/ 踩过的坑写进去 / 验证 AI 真会用；"记性靠不住，文件靠得住"。
+- [[Superpowers 组合实战1 从一句话到上线]] — 乐乐零花钱全流水线贯通（brainstorm→plans→TDD→API→前端→verification→上线）；诚实边界"上线≠部署"（H2 教学 vs 生产工程）。
+- [[Superpowers 组合实战2 线上大排查]] — 三调试技能协同：先 curl 分而治之 → 三假设排除 → 根因 watch 漏 ownerId 依赖（"数据不对"实为"没刷新"）；文中防回归测试为示意骨架（作者自注）。
+- [[Superpowers 结语 AI 技能树]] — 三心得：把运气变流程（验证即证据主题再 +1）/ 完整的项目是最好的老师 / 规矩靠固化不靠记性；七层技能树总图。
+- [[Superpowers 全系列速查合集]] — 收官"不是随缘，是走流程"；⚠️ 抓取件疑不全（速查表多分类空缺、21 篇归类错置），待 lint 补抓核对。
+- 新建 synthesis：[[writing-skills 跨路线对照]]（confidence: medium）— mattpocock 八词诊断 vs Superpowers writing-skills 四共识（description 触发器 / no-op 测试 / 坑位资产 / 写完验证）+ 分歧在姿态（减法手术 vs 加法固化）。
+- 更新 3 页：[[Superpowers]]（sources +8、系列完结 25 源、debugging 类收齐）、[[超级奶爸老谭]]（系列结构全重排：调试四篇+审查两篇+元技能+组合实战+结语、时间线、待收录清零）、[[Superpowers verification-before-completion 验证再收工]]（debugging 类收齐注记）。
+- INDEX：系列组标题改"已完结 24+1 篇" + 8 行；synthesis 组 +1；Pending 待收录条目清零注记；"验证即证据"观察项源数更新至 6+。
+- 过程注记：一次 INDEX 编辑失误（"验证即证据"行首被误并入上一行），当场发现并修复，未留残余。
+- 待办：总结篇 defuddle 补抓核对速查表原文。

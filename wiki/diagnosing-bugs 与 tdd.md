@@ -10,7 +10,7 @@ source_url: "https://mp.weixin.qq.com/s?__biz=Mzg4MzcyOTQ2NQ==&mid=2247491490&id
 author: "[[运维有术]]"
 date_published: "2026-07-22"
 created: 2026-08-10
-updated: 2026-09-09
+updated: 2026-09-11
 status: active
 aliases: [diagnosing-bugs, /diagnosing-bugs, tdd, /tdd, red-capable command, tracer bullet]
 ---
@@ -40,6 +40,7 @@ aliases: [diagnosing-bugs, /diagnosing-bugs, tdd, /tdd, red-capable command, tra
 - 相关概念：[[mattpocock skills]]、[[子代理驱动开发]]
 - 相关实体：[[Matt Pocock]]、[[运维有术]]、[[Superpowers]]
 - 相关源：[[grill-me 实战指南]]、[[还在用 grill-with-docs]]、[[mattpocock skills 推荐工作流速查]]
+- Superpowers 侧 4 阶段的中文教学化完整展开（含"报表多 57 元"ownerId 过滤案例与防回归测试）见 [[Superpowers systematic-debugging 四阶段调试]]（2026-09-10 补）——该实录未提 red-capable command，复现阶段以 curl 手工替代，印证本页"两者不能无条件互换"的判断。配套的 [[Superpowers root-cause-tracing 根因追踪]]（2026-09-11 补）给出根因判据"修掉后能否解释所有相关症状"与"每跳一层都靠证据"——与 Phase 3 falsifiable 假设同构，跨路线可对照引用。
 
 ## ⚠️ 矛盾 / 待澄清
 
@@ -51,4 +52,4 @@ aliases: [diagnosing-bugs, /diagnosing-bugs, tdd, /tdd, red-capable command, tra
 
 ## 相关页面
 
-- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[Superpowers]] · [[mattpocock skills 推荐工作流速查]] · [[tdd 与 diagnosing-bugs 反馈回路]] · [[超级奶爸老谭]]
+- [[mattpocock skills]] · [[Matt Pocock]] · [[运维有术]] · [[Superpowers]] · [[mattpocock skills 推荐工作流速查]] · [[tdd 与 diagnosing-bugs 反馈回路]] · [[超级奶爸老谭]] · [[Superpowers systematic-debugging 四阶段调试]] · [[Superpowers root-cause-tracing 根因追踪]]

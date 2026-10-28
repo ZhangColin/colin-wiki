@@ -12,7 +12,7 @@
 - [[运维有术]] — 公众号「术哥无界」，本 wiki 被引用最多的作者（LLM Wiki + mattpocock/Superpowers/gstack 三大系列源码解读）
 - [[Matt Pocock]] — TypeScript 教育者/Total TypeScript 作者，mattpocock skills 作者
 - [[小匠Skills]] — 公众号，中文圈 mattpocock skills 主要解读者（v1.0 总览/v1.1 更新/视频搬运系列）
-- [[超级奶爸老谭]] — 公众号，mattpocock skills 教学路线图作者（主系列 7 课 + 5 专题共 12 篇全收录，EShop 案例贯穿，v1.1 口径快照）
+- [[超级奶爸老谭]] — 公众号，Java 老 programmer，先后系统教学两条 skills 路线：mattpocock skills（EShop 12 篇完结，v1.1 口径）+ Superpowers（幸福账本系列连载中，2026-08/09 当前口径）
 - [[AI随风随风]] — B 站 UP，mattpocock skills 秒杀系统实战 demo 作者（第三方第二视角）
 - [[鸟窝]] — Go 圈博主（smallnest），用 pigo 实测 Matt Pocock skills，提供外部使用者视角
 - [[飞哥]] — 公众号「刷屏AI」/Vibe Coding，最早（2026-04-07）提出 superpowers+gstack 搭配
@@ -111,6 +111,33 @@
 - [[Superpowers 7阶段交付SKU库存扣减]] — Python 电商库存扣减实战 · 2026-04-14
 - [[Superpowers 6.0 reviewer 只读重写]] — v6.0 reviewer 结构性重写（两 reviewer 合一等） · 2026-06-22
 
+### Superpowers — 老谭教学系列·幸福账本（2026-08～09，已完结 24+1 篇）
+- [[Superpowers 开篇 幸福账本]] — 系列缘起/四规矩/技术栈约定（Java+Vue 全栈贯穿） · 2026-08-21
+- [[Superpowers 安装与技能全景]] — 三步安装 + **18 技能四分类全景**（2026-08 仓库口径）+ 双工程骨架 · 2026-08-24
+- [[Superpowers brainstorming 需求访谈]] — 苏格拉底一次一问，四轮把一句话聊成规格 · 2026-08-25
+- [[Superpowers writing-plans 施工图]] — 规格→带粒度/验收/依赖的任务树 · 2026-08-26
+- [[Superpowers executing-plans 一步一确认]] — 分批+确认+回滚，计划执行器 · 2026-08-27
+- [[Superpowers TDD 红绿循环]] — 红绿重构三拍子 + 哨兵测试，后端 JUnit/前端 Vitest · 2026-08-28
+- [[Superpowers condition-based-waiting 条件等待]] — 等条件不猜时间：Awaitility + 前端轮询 · 2026-08-31
+- [[Superpowers testing-anti-patterns 测试反模式]] — 四坑：测实现/靠时机/复制粘贴/只测快乐路径 · 2026-09-01
+- [[幸福账本 REST API 基建]] — 基建篇①：record/实体分层 + X-User-Id 账本切换 + 统一错误 · 2026-09-02
+- [[幸福账本 Vue 前端起步]] — 基建篇②：请求封装/账本联动/前后端第一次握手 · 2026-09-03
+- [[Superpowers using-git-worktrees 工作树隔离]] — 一仓库多工作区，"隔离靠目录不靠自觉" · 2026-09-04
+- [[Superpowers finishing-a-development-branch 分支收尾]] — 合/修/弃三结局 + 合完主干再测 · 2026-09-07
+- [[Superpowers dispatching-parallel-agents 并行派发]] — 契约先钉死，拆到能"孤零零地验证" · 2026-09-08
+- [[Superpowers subagent-driven-development AI 项目经理]] — 主会话当 PM：拆派审合 + 两级审查（教学化口径）· 2026-09-09
+- [[Superpowers systematic-debugging 四阶段调试]] — 复现→假设→验证→根因，"报表多 57 元"深夜排查案 · 2026-09-10
+- [[Superpowers root-cause-tracing 根因追踪]] — 沿因果链从表象追到根子，"差一分钱"doubleValue() 案例 + 根因判据 · 2026-09-11
+- [[Superpowers verification-before-completion 验证再收工]] — 改完≠完成：测试绿+真实环境走一遍+验收对照，证据不能是"我觉得" · 2026-09-14
+- [[Superpowers defense-in-depth 纵深防御]] — 一道锁→四道锁：前端/@Valid/MoneyRules/防回归层层叠，debugging 类收官 · 2026-09-15
+- [[Superpowers requesting-code-review 主动求审]] — 交"能审的活"：看 diff/跑测试/自查清单/写说明+"重点审哪" · 2026-09-16
+- [[Superpowers receiving-code-review 接受审查]] — 别急着辩护：理解→逐条回应（改/讨论/不改）→改完给证据 · 2026-09-17
+- [[Superpowers writing-skills 规矩固化成技能]] — 元技能：description 管触发、规矩可执行、坑写进去、验证生效 · 2026-09-18
+- [[Superpowers 组合实战1 从一句话到上线]] — 乐乐零花钱：brainstorm→plans→TDD→API→前端→验证→上线全流水线 · 2026-09-20
+- [[Superpowers 组合实战2 线上大排查]] — 三调试技能协同：先 curl 分治→三假设排除→根因 watch 漏 ownerId 依赖 · 2026-09-21
+- [[Superpowers 结语 AI 技能树]] — 三心得：把运气变流程/完整项目是老师/规矩靠固化；七层技能树 · 2026-09-22
+- [[Superpowers 全系列速查合集]] — 全系列速查手册（⚠️ 抓取件疑不全待补），"不是随缘，是走流程" · 2026-09-23
+
 ### gstack 与插件搭配
 - [[gstack 最佳实战]] — 23 命令 Sprint 工作流 + Bun/CDP 无头浏览器架构 · 2026-04-11
 - [[Superpowers + gstack 搭配实战]] — 大脑/手脚三层不冲突 + 5 交接点 · 2026-04-12
@@ -154,6 +181,7 @@
 
 - [[mattpocock skills 推荐工作流速查]] — 按"活的大小/类型"给推荐路径（主线四步 / wayfinder 超大活 / 重构 / bug 修复），新手入口、常查导向
 - [[Superpowers 与 mattpocock skills 路线对照]] — 两条 Claude Code skills 路线分歧（强制 vs 最小化）与共存结论
+- [[writing-skills 跨路线对照]] — mattpocock 八词诊断 vs Superpowers writing-skills：四共识（description 触发/no-op/坑位/验证）+ 减法手术 vs 加法固化两姿态
 - [[Superpowers 与 gstack 搭配（大脑与手脚）]] — 双插件搭配范式，飞哥+运维有术独立得出一致结论
 - [[MCP 与直连凭证对比]] — 为什么配置 MCP 而非直接给 agent 数据库凭证：结构性约束 + 凭证不进上下文
 
@@ -188,6 +216,8 @@
 - Agent UI / Agentic UI 设计 — 炼丹上岸单源系统方法论（八类对象/Message Part/五层前端架构），已建 [[从 Chat UI 到 Agent UI]] source 页；概念页待第二源触发
 - 设计树 / frontier / round — grilling 批量访谈三机制（已覆盖于 [[Matt Skills v1.2 grilling 重构]] 与 [[batch-grill-me 批量访谈]]）
 - 深模块 / 浅模块 / 删除测试 — improve-codebase-architecture 体检词汇（1 源，已覆盖于 [[improve-codebase-architecture 代码库体检]] 与 [[Matt Pocock 三个 skill 结构词汇]]）
+- 验证即证据（verification as evidence）— "完成=验证过+有证据"纪律：TDD 红绿 / finishing 合完再测 / v6.0 reviewer 不信报告 / verification 三问 / receiving 改完给证据 / 结语"把运气变流程"（6+ 源），已覆盖于各 source 页，待独立概念页
+- Superpowers 待收录技能篇目：（已清零——老谭幸福账本系列 2026-09-23 完结，25 源全收录）
 
 **实体**（被提及但非专段讨论）：
 - Codex / Cursor / OpenCode — 其他可用 LLM agent
